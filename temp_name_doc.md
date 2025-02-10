@@ -7,3 +7,5 @@ Tyler Campbell
 Chris Oaks
 
 Ismael Melchor
+
+Curtis Reece
