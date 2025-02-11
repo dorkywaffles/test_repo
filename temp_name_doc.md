@@ -8,6 +8,13 @@ Chris Oaks
 
 Ismael Melchor
 
+<<<<<<< Sprint1_AddNameNathanM
+Zach Farmer
+
+Nathan Mink
+
+=======
 Curtis Reece
 
 Zach Farmer
+>>>>>>> dev
