@@ -1,10 +1,19 @@
 using BucStop;
+using Serilog;
 
 /*
  * This is the base program which starts the project.
  */
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Sets up Serilog for logging to console and log file
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/logs.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7) // Creates a new log file each day and keeps up to 7 log files (7 days)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -23,15 +32,6 @@ builder.Services.AddAuthentication("CustomAuthenticationScheme").AddCookie("Cust
 {
     options.LoginPath = "/Account/Login";
 });
-
-// This creates the timestamp for the logger.
-builder.Logging.AddSimpleConsole(options =>
-{
-    options.IncludeScopes = true;
-    options.TimestampFormat = "yyyy-MM-dd HH:mm:ss ";
-});
-
-
 
 builder.Services.AddSingleton<GameService>();
 
