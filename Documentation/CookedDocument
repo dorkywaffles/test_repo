@@ -5,7 +5,24 @@ MVP:
 Significant change made to the code, non-noticeable change for the user.
 
 Definition of Done:
-Something is done once it has gone through at least two code reviews ensuring that it works and free of any volatile bugs that could cause it to break itself or the program as whole. The code reviews must have one real person review. It also must map back to a requirement in the product backlog. 
+A task is “done" when it:
+
+1. Has gone through at least 2 code reviews that ensure it works and is free of any volatile bugs that could cause it to break itself or the program as a whole. At least one of these code reviews has to be made by a real person.
+2. Has been tested to confirm the expected functionality and stability. These tests include manual testing for edge cases and expected behavior, unit testing when applicable, and integration tests. The outcome, successful or otherwise, should be documented for future reference.
+3. Maps back to a requirement in the product backlog.
+
+Research DOD:
+Research is "done" when:
+1. Key findings are documented in an accessible format and shared with the entire team.
+2. The research directly addresses the objective or question outlined in the task. Any relevant insights, recommendations, or potential next steps are included.
+3. The research has been reviewed and acknowledged by at least two team members.
+
+Test DOD:
+Testing is "done" when:
+1. The test case is clearly defined and documented, including the expected input, the expected output, and what edge cases are considered.
+2. The test has been executed and results are recorded, specifying whether the test passed or failed and/or any unexpected behavior. 
+3. The test has been reviewed and approved by at least one team member.
+
 
 Calculated Target Velocity:
 Each developer has 5  hours. Times that by 8 to get 40. Because no one is 100% productive, multiply that by 0.6 to get 24 hours. So the CTV is 24 hours.
