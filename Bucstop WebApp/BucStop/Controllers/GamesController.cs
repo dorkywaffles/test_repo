@@ -49,7 +49,7 @@ namespace BucStop.Controllers
 
             stopwatch.Stop();
 
-            _logger.LogInformation($"Games Page Load Time: {stopwatch.ElapsedMilliseconds} ms");
+            _logger.LogInformation("{Category}: Games Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
 
             return View(games);
         }
@@ -84,15 +84,13 @@ namespace BucStop.Controllers
 
             stopwatch.Stop();
 
-            _logger.LogInformation($"{game.Title} Play Load Time: {stopwatch.ElapsedMilliseconds} ms");
+            _logger.LogInformation("{Category}: {GameTitle} Page Loaded in {LoadTime}ms.", "PageLoadTimes", game.Title, stopwatch.ElapsedMilliseconds);
 
             return View(game);
         }
 
         public async Task<List<Game>> GetGamesWithInfo()
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
 
             List<Game> games = _gameService.GetGames();
             try
@@ -125,10 +123,6 @@ namespace BucStop.Controllers
             {
                 _logger.LogError(ex, "Error retrieving game information from API.");
             }
-
-            stopwatch.Stop();
-
-            _logger.LogInformation($"Get Games Load Time: {stopwatch.ElapsedMilliseconds} ms");
 
             return games;
         }
