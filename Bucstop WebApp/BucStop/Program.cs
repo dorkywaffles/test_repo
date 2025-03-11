@@ -21,7 +21,6 @@ Log.Logger = new LoggerConfiguration()
      .WriteTo.Logger(lc => lc
         .Filter.ByIncludingOnly(Matching.WithProperty("Category", "GameSuccess"))
         .WriteTo.File("Logs/game_success.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in successful api_requests
-    .WriteTo.Console()
     .CreateLogger();
 
 builder.Host.UseSerilog();
