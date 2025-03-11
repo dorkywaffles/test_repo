@@ -3,6 +3,7 @@ using BucStop.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
+using System.Diagnostics;
 
 /*
  * This file handles the links to each of the game pages.
@@ -34,6 +35,10 @@ namespace BucStop.Controllers
         public async Task<IActionResult> IndexAsync()
         {
             _logger.LogInformation("Games index page accessed.");
+           
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             List<Game> games = await GetGamesWithInfo();
 
             //have to update playcounts here since the we are reading it dynamically now instead of from a static list
@@ -42,6 +47,10 @@ namespace BucStop.Controllers
                 game.PlayCount = _playCountManager.GetPlayCount(game.Id);
             }
 
+            stopwatch.Stop();
+
+            _logger.LogInformation($"Games Page Load Time: {stopwatch.ElapsedMilliseconds} ms");
+
             return View(games);
         }
 
@@ -49,6 +58,10 @@ namespace BucStop.Controllers
         public async Task<IActionResult> Play(int id)
         {
             _logger.LogInformation("{Category}: User requested to play game with ID {GameId}.", "GameSuccess", id);
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             List<Game> games = await GetGamesWithInfo();
 
             Game game = games.FirstOrDefault(x => x.Id == id);
@@ -69,11 +82,18 @@ namespace BucStop.Controllers
             _logger.LogInformation("{Category}: Game '{GameTitle}' (ID: {GameId}) successfully loaded.",
                                     "GameSuccess", game.Title, game.Id);
 
+            stopwatch.Stop();
+
+            _logger.LogInformation($"{game.Title} Play Load Time: {stopwatch.ElapsedMilliseconds} ms");
+
             return View(game);
         }
 
         public async Task<List<Game>> GetGamesWithInfo()
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             List<Game> games = _gameService.GetGames();
             try
             {
@@ -105,6 +125,10 @@ namespace BucStop.Controllers
             {
                 _logger.LogError(ex, "Error retrieving game information from API.");
             }
+
+            stopwatch.Stop();
+
+            _logger.LogInformation($"Get Games Load Time: {stopwatch.ElapsedMilliseconds} ms");
 
             return games;
         }
