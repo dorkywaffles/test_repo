@@ -47,7 +47,7 @@ namespace BucStop.Controllers
 
                 stopwatch.Stop();
 
-                _logger.LogInformation($"Successful Login Load Time: {stopwatch.ElapsedMilliseconds} ms");
+                _logger.LogInformation("{Category}: Successful Login Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
 
                 return RedirectToAction("Index", "Home");
             }
@@ -59,7 +59,7 @@ namespace BucStop.Controllers
 
                 stopwatch.Stop();
 
-                _logger.LogInformation($"Denied Login Load Time: {stopwatch.ElapsedMilliseconds} ms");
+                _logger.LogInformation("{Category}: Denied Login Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
 
                 return View();
             }
