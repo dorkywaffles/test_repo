@@ -1,4 +1,5 @@
 using BucStop;
+using BucStop.Services;
 using Serilog;
 using Serilog.Filters;
 
@@ -24,6 +25,9 @@ Log.Logger = new LoggerConfiguration()
          .WriteTo.Logger(lc => lc
         .Filter.ByIncludingOnly(Matching.WithProperty("Category", "PageLoadTimes"))
         .WriteTo.File("Logs/page_load_times.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in failed page load times
+     .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(Matching.WithProperty("Category", "APIHeartbeat"))
+        .WriteTo.File("Logs/api_heartbeat.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in API HeartBeats
     .CreateLogger();
 
 builder.Host.UseSerilog();
@@ -47,6 +51,7 @@ builder.Services.AddAuthentication("CustomAuthenticationScheme").AddCookie("Cust
 });
 
 builder.Services.AddSingleton<GameService>();
+builder.Services.AddHostedService<ApiHeartbeatService>();
 
 var app = builder.Build();
 
