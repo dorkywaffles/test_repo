@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 using System.Security.Claims;
 using System.Text.RegularExpressions;
 
@@ -26,6 +27,9 @@ namespace BucStop.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(string email)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             if (Regex.IsMatch(email, @"\b[A-Za-z0-9._%+-]+@etsu\.edu\b"))
             {
                 // If authentication is successful, create a ClaimsPrincipal and sign in the user
@@ -41,6 +45,10 @@ namespace BucStop.Controllers
                 // Sign in the user
                 await HttpContext.SignInAsync("CustomAuthenticationScheme", userPrincipal);
 
+                stopwatch.Stop();
+
+                _logger.LogInformation("{Category}: Successful Login Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
+
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -48,6 +56,11 @@ namespace BucStop.Controllers
                 // Authentication failed, return to the login page with an error message
                 _logger.LogWarning("{Category}: Invalid login attempt for {Email}", "InvalidLogin", email);
                 ModelState.AddModelError(string.Empty, "Only ETSU students can play, sorry :(");
+
+                stopwatch.Stop();
+
+                _logger.LogInformation("{Category}: Denied Login Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
+
                 return View();
             }
         }
