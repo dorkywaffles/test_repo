@@ -37,9 +37,9 @@ namespace Gateway
             try
             {
                 var SnakeTask = AddGameInfo("https://localhost:1948", "/Snake" ); //Snake 
-                var Tetristask = AddGameInfo("https://localhost:2626", "/Tetris"); //Tetris
-                var PongTask = AddGameInfo("https://localhost:1941", "Pong"); //Pong
-                await Task.WhenAll(SnakeTask, Tetristask, PongTask);
+                var PongTask = AddGameInfo("https://localhost:1941", "/Pong"); //Pong
+                var TetrisTask = AddGameInfo("https://localhost:2626", "/Tetris"); //Tetris
+                await Task.WhenAll(SnakeTask, PongTask, TetrisTask);
                 return TheInfo;
             }
             catch (Exception ex)
