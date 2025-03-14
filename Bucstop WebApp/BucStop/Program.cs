@@ -1,10 +1,36 @@
 using BucStop;
+using BucStop.Services;
+using Serilog;
+using Serilog.Filters;
 
 /*
  * This is the base program which starts the project.
  */
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Sets up Serilog for logging to console and log file
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/logs.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7) // Creates a new log file each day and keeps up to 7 log files (7 days)
+    .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(Matching.WithProperty("Category", "APIRequests"))
+        .WriteTo.File("Logs/api_requests.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in failed api_requests
+    .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(Matching.WithProperty("Category", "InvalidLogin"))
+        .WriteTo.File("Logs/invalid_login.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in failed login errors
+     .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(Matching.WithProperty("Category", "GameSuccess"))
+        .WriteTo.File("Logs/game_success.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in successful api_requests
+         .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(Matching.WithProperty("Category", "PageLoadTimes"))
+        .WriteTo.File("Logs/page_load_times.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in failed page load times
+     .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(Matching.WithProperty("Category", "APIHeartbeat"))
+        .WriteTo.File("Logs/api_heartbeat.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in API HeartBeats
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -24,16 +50,8 @@ builder.Services.AddAuthentication("CustomAuthenticationScheme").AddCookie("Cust
     options.LoginPath = "/Account/Login";
 });
 
-// This creates the timestamp for the logger.
-builder.Logging.AddSimpleConsole(options =>
-{
-    options.IncludeScopes = true;
-    options.TimestampFormat = "yyyy-MM-dd HH:mm:ss ";
-});
-
-
-
 builder.Services.AddSingleton<GameService>();
+builder.Services.AddHostedService<ApiHeartbeatService>();
 
 var app = builder.Build();
 
