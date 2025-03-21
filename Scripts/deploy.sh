@@ -40,9 +40,10 @@ cleanup_docker() {
     docker-compose down
     
     # Remove all images, containers, and volumes Suppress build cache object IDs, but keep total reclaimed space
+    # Supress build cache deleted images and object IDs (because its ugly), but keep total reclaimed space
+    # We are on EBS storage and need to keep it LOW because it costs money so space reclaimed is valueable info
     docker system prune -af --volumes | awk '
-        # Supress build cache deleted images and object IDs (because its ugly), but keep total reclaimed space
-        # We are on EBS storage and need to keep it LOW because it costs money so space reclaimed is valueable info
+
         /Deleted Images:/ { skip=1; next }
         /Deleted build cache objects:/ { skip=1; next }
         /^Total reclaimed space:/ {
