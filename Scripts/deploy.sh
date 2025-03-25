@@ -149,6 +149,8 @@ build_uncontainerized() {
 
         echo -e "🚀  Starting $service_name on port $port..."
         ASPNETCORE_URLS="http://0.0.0.0:$port" \
+        # There is currently only a "developement" environment variable outlined in launchSettings.json
+        # and no Prod environment variable.
         ASPNETCORE_ENVIRONMENT="Development" \
         dotnet run --no-launch-profile &
         local pid=$!
