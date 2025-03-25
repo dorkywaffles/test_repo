@@ -117,6 +117,9 @@ build_uncontainerized() {
         fi
         
         # Run the service in the background with explicit URL binding and HTTPS disabled
+        # This is because we are running on an EC2 instance and we need to bind to the
+        # public IP address and disable HTTPS because the SSL certificate is self-signed
+        # and not trusted by default in browsers (which should fine for our purposes)
         echo -e "🚀  Starting $service_name on port $port..."
         ASPNETCORE_URLS="http://0.0.0.0:$port" \
         ASPNETCORE_ENVIRONMENT="Development" \
