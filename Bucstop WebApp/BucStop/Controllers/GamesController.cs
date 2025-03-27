@@ -18,6 +18,7 @@ namespace BucStop.Controllers
         private readonly PlayCountManager _playCountManager;
         private readonly GameService _gameService;
         private readonly ILogger<GamesController> _logger;
+        private Task<List<Game>> gamesAsync; 
 
 
         public GamesController(MicroClient games, IWebHostEnvironment webHostEnvironment, GameService gameService, ILogger<GamesController> logger)
@@ -28,6 +29,9 @@ namespace BucStop.Controllers
 
             // Initialize the PlayCountManager with the web root path and the JSON file name
             _playCountManager = new PlayCountManager(_gameService.GetGames() ?? new List<Game>(), webHostEnvironment);
+
+            //start the async pull of the games info
+            gamesAsync = GetGamesWithInfo(); 
         }
 
         //Takes the user to the index page, passing the games list as an argument
@@ -39,7 +43,8 @@ namespace BucStop.Controllers
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            List<Game> games = await GetGamesWithInfo();
+            //await the async gamesinfo
+            List<Game> games = await gamesAsync; 
 
             //have to update playcounts here since the we are reading it dynamically now instead of from a static list
             foreach(Game game in games)
@@ -62,7 +67,8 @@ namespace BucStop.Controllers
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            List<Game> games = await GetGamesWithInfo();
+            //await the async gamesinfo
+            List<Game> games = await gamesAsync;
 
             Game game = games.FirstOrDefault(x => x.Id == id);
             if (game == null)
