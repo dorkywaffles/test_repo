@@ -96,7 +96,6 @@ cleanup() {
         done
     fi
 
-    exit 1
 }
 
 # Bind cleanup to Ctrl+C and termination signals
