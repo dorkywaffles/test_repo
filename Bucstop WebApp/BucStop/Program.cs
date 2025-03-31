@@ -28,6 +28,9 @@ Log.Logger = new LoggerConfiguration()
      .WriteTo.Logger(lc => lc
         .Filter.ByIncludingOnly(Matching.WithProperty("Category", "APIHeartbeat"))
         .WriteTo.File("Logs/api_heartbeat.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in API HeartBeats
+     .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(Matching.WithProperty("Category", "UserActivity"))
+        .WriteTo.File("Logs/user_activity.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file for user activity
     .CreateLogger();
 
 builder.Host.UseSerilog();
