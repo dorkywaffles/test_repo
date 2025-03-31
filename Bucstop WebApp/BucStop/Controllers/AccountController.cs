@@ -30,7 +30,8 @@ namespace BucStop.Controllers
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            if (Regex.IsMatch(email, @"\b[A-Za-z0-9._%+-]+@etsu\.edu\b"))
+            //ToLower added to remove case sensitivity. Current Font makes all lettering look like capital letters.
+            if (Regex.IsMatch(email.ToLower(), @"\b[A-Za-z0-9._%+-]+@etsu\.edu\b"))
             {
                 // If authentication is successful, create a ClaimsPrincipal and sign in the user
                 var claims = new[]
