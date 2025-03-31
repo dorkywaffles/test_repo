@@ -55,6 +55,7 @@ namespace BucStop.Controllers
             stopwatch.Stop();
 
             _logger.LogInformation("{Category}: Games Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
+            _logger.LogInformation("{Category}: {User} accessed the games index page.", "UserActivity", User.Identity?.Name ?? "Anonymous");
 
             return View(games);
         }
@@ -87,6 +88,8 @@ namespace BucStop.Controllers
 
             _logger.LogInformation("{Category}: Game '{GameTitle}' (ID: {GameId}) successfully loaded.",
                                     "GameSuccess", game.Title, game.Id);
+            _logger.LogInformation("{Category}: {User} started playing '{GameTitle}' (ID: {GameId}).",
+                                    "UserActivity", User.Identity?.Name ?? "Anonymous", game.Title, game.Id);
 
             stopwatch.Stop();
 
