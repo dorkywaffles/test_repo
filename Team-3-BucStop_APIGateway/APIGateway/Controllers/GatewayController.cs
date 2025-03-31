@@ -38,14 +38,14 @@ namespace Gateway
         {
             try
             {
-                var SnakeUrl = _config["MicroserviceUrls:Snake"];
-                var PongUrl = _config["MicroserviceUrls:Pong"];
-                var TetrisUrl = _config["MicroserviceUrls:Tetris"];
+                var SnakeUrl = _config["MicroserviceUrls:Snake"]; // id 1
+                var TetrisUrl = _config["MicroserviceUrls:Tetris"]; // id 2
+                var PongUrl = _config["MicroserviceUrls:Pong"]; // id 3
 
-                var SnakeTask = AddGameInfo(SnakeUrl, "/Snake");
-                var PongTask = AddGameInfo(PongUrl, "/Pong");
-                var TetrisTask = AddGameInfo(TetrisUrl, "/Tetris");
-                await Task.WhenAll(SnakeTask, PongTask, TetrisTask);
+                var SnakeTask = AddGameInfo(SnakeUrl, "/Snake"); //id 1
+                var TetrisTask = AddGameInfo(TetrisUrl, "/Tetris"); //id 2
+                var PongTask = AddGameInfo(PongUrl, "/Pong"); //id 3
+                await Task.WhenAll(SnakeTask, TetrisTask, PongTask);
                 return TheInfo;
             }
             catch (Exception ex)
