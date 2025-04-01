@@ -30,7 +30,8 @@ namespace BucStop.Controllers
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            if (Regex.IsMatch(email, @"\b[A-Za-z0-9._%+-]+@etsu\.edu\b"))
+            //ToLower added to remove case sensitivity. Current Font makes all lettering look like capital letters.
+            if (Regex.IsMatch(email.ToLower(), @"\b[A-Za-z0-9._%+-]+@etsu\.edu\b"))
             {
                 // If authentication is successful, create a ClaimsPrincipal and sign in the user
                 var claims = new[]
@@ -47,6 +48,7 @@ namespace BucStop.Controllers
 
                 stopwatch.Stop();
 
+                _logger.LogInformation("{Category}: {User} successfully logged in.", "UserActivity", email);
                 _logger.LogInformation("{Category}: Successful Login Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
 
                 return RedirectToAction("Index", "Home");
@@ -67,6 +69,8 @@ namespace BucStop.Controllers
 
         public async Task<IActionResult> Logout()
         {
+            _logger.LogInformation("{Category}: {User} logged out.", "UserActivity", User.Identity?.Name ?? "Anonymous");
+
             _logger.LogInformation("User logged out.");
             await HttpContext.SignOutAsync("CustomAuthenticationScheme");
             return RedirectToAction("Login");
