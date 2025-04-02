@@ -40,10 +40,10 @@ Static file hosting allows each game's JavaScript files to be served directly fr
 ### *Uncontainerized - Standard*
 Assuming you have at least the WebApp running and Tetris (not containerized), you can do the following from the CLI:
 - Using curl.exe with -k flag for HTTPS (not sure why PS `curl` alias can't access `-k` flag)
-`curl.exe -k https://localhost:2626/js/tetris.js`
+   - `curl.exe -k https://localhost:2626/js/tetris.js`
 
 - Or using Invoke-WebRequest
-`Invoke-WebRequest -Uri "https://localhost:2626/js/tetris.js"`
+   - `Invoke-WebRequest -Uri "https://localhost:2626/js/tetris.js"`
 
 ### *Containerized*
 Assuming you have built and run at least the WebApp container and Tetris container, you can do the following:
