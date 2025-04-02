@@ -23,7 +23,7 @@ GameService/
 ```
 
 ## How It Works
-1. When a request comes in (e.g., `http://tetris-service:5001/images/logo.png`):
+1. When a request comes in (e.g., `http://tetris-service:5001/images/logo.png` or for the js):
    - The `UseStaticFiles` checks the `wwwroot` folder
    - If the file exists, it's served directly - no issues
    - If not found, error
@@ -49,7 +49,7 @@ Assuming you have at least the WebApp running and Tetris (not containerized), yo
 Assuming you have built and run at least the WebApp container and Tetris container, you can do the following:
 
 - Again, using the curl command from the CLI, now just on port 8084:
-`curl http://localhost:8084/js/tetris.js `
+   - `curl http://localhost:8084/js/tetris.js `
 
 
 
