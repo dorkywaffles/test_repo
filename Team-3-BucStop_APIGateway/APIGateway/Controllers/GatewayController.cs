@@ -80,11 +80,11 @@ namespace Gateway
                 if (response.IsSuccessStatusCode)
                 {
                     // Deserialize the response content to a GameInfo object
-                    var gameinfo = await response.Content.ReadFromJsonAsync<List<GameInfo>>();
+                    var gameInfo = await response.Content.ReadFromJsonAsync<List<GameInfo>>();
                     //Add object to list
                     lock (TheInfo)
                     {
-                        TheInfo.AddRange(gameinfo);
+                        TheInfo.AddRange(gameInfo);
                     }
                 }
                 else
