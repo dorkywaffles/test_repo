@@ -40,8 +40,13 @@
                             <canvas width="400" height="500" id="game" style="border: 1px solid #000000; background-color: gray"></canvas>
                         }
 
-                        <!-- Embed the game's Javascript here -->
-                        <script src="@Url.Content(Model.Content)"></script>
+
+                        <!--Web tools Console Logging of the JS game code URL-->
+                        <script>
+                            console.log("Game Script URL: @Model.Content");
+                        </script>
+                        <!-- Embed the game's JavaScript from the microservice -->
+                        <script src="@Model.Content"></script>
 
                         <p id="playerScore" style="color:black">Current Score: 0</p>
                     </div>
