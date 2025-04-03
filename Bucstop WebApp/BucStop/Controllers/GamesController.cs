@@ -101,7 +101,8 @@ namespace BucStop.Controllers
         public async Task<List<Game>> GetGamesWithInfo()
         {
 
-            List<Game> games = _gameService.GetGames();
+            List<Game> games = new List<Game>();
+
             try
             {
                 GameInfo[] gameInfos = await _httpClient.GetGamesAsync();
@@ -115,17 +116,24 @@ namespace BucStop.Controllers
                     _logger.LogWarning("API returned 0 games.");
                 }
 
-                foreach (Game game in games)
+                foreach (GameInfo info in gameInfos)
                 {
-                    GameInfo info = gameInfos.FirstOrDefault(x => x.Title == game.Title);
+                    Game game = new Game();
+
                     if (info != null)
                     {
+                        game.Id = info.Id;
+                        game.Title = info.Title;
+                        game.Content = info.Content;
+                        game.Thumbnail = info.Thumbnail;
                         game.Author = info.Author;
                         game.HowTo = info.HowTo;
                         game.DateAdded = info.DateAdded;
                         game.Description = $"{info.Description} \n {info.DateAdded}";
                         game.LeaderBoard = info.LeaderBoard;
                     }
+
+                    games.Add(game);
                 }
             }
             catch (Exception ex)
