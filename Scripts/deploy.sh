@@ -1,11 +1,12 @@
 #!/bin/bash
-
+export ASPNETCORE_ENVIRONMENT=Production
 # ─────────────────────────────────────────────────────────────
 #  Config / Constants
 # ─────────────────────────────────────────────────────────────
 
 # Prod IP, still figuring out how we want to manage dev IP not being static
 PUBLIC_IP="3.232.16.65"
+
 
 # Required CLI tools
 REQUIRED_CMDS=("git" "docker" "docker-compose" "dotnet")
@@ -96,7 +97,6 @@ cleanup() {
         done
     fi
 
-    exit 1
 }
 
 # Bind cleanup to Ctrl+C and termination signals

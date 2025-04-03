@@ -19,11 +19,13 @@ namespace Gateway
         private readonly HttpClient _httpClient; // Making readonly ensures thread safety 
         private readonly ILogger<GatewayController> _logger; // Making readonly ensures thread safety 
         private readonly List<GameInfo> TheInfo;
+        private readonly IConfiguration _config;
 
-        public GatewayController(HttpClient httpClient, ILogger<GatewayController> logger)
+        public GatewayController(HttpClient httpClient, ILogger<GatewayController> logger, IConfiguration config)
         {
             _httpClient = httpClient;
             _logger = logger;
+            _config = config;
             TheInfo = new List<GameInfo>();
         }
 
@@ -36,10 +38,14 @@ namespace Gateway
         {
             try
             {
-                var SnakeTask = AddGameInfo("https://localhost:1948", "/Snake" ); //Snake 
-                var PongTask = AddGameInfo("https://localhost:1941", "/Pong"); //Pong
-                var TetrisTask = AddGameInfo("https://localhost:2626", "/Tetris"); //Tetris
-                await Task.WhenAll(SnakeTask, PongTask, TetrisTask);
+                var SnakeUrl = _config["MicroserviceUrls:Snake"]; // id 1
+                var TetrisUrl = _config["MicroserviceUrls:Tetris"]; // id 2
+                var PongUrl = _config["MicroserviceUrls:Pong"]; // id 3
+
+                var SnakeTask = AddGameInfo(SnakeUrl, "/Snake"); //id 1
+                var TetrisTask = AddGameInfo(TetrisUrl, "/Tetris"); //id 2
+                var PongTask = AddGameInfo(PongUrl, "/Pong"); //id 3
+                await Task.WhenAll(SnakeTask, TetrisTask, PongTask);
                 return TheInfo;
             }
             catch (Exception ex)
@@ -74,11 +80,11 @@ namespace Gateway
                 if (response.IsSuccessStatusCode)
                 {
                     // Deserialize the response content to a GameInfo object
-                    var gameinfo = await response.Content.ReadAsAsync<List<GameInfo>>();
+                    var gameInfo = await response.Content.ReadFromJsonAsync<List<GameInfo>>();
                     //Add object to list
                     lock (TheInfo)
                     {
-                        TheInfo.AddRange(gameinfo);
+                        TheInfo.AddRange(gameInfo);
                     }
                 }
                 else

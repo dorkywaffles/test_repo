@@ -29,18 +29,21 @@ namespace BucStop.Controllers
         //Takes the user to the admin page.
         public IActionResult Admin()
         {
+            _logger.LogInformation("{Category}: {User} visited the Admin page.", "UserActivity", User.Identity?.Name ?? "Anonymous");
             return View();
         }
 
         //Takes the user to the about policy page.
         public IActionResult Privacy()
         {
+            _logger.LogInformation("{Category}: {User} visited the Privacy page.", "UserActivity", User.Identity?.Name ?? "Anonymous");
             return View();
         }
 
         //Takes the user to the game criteria page.
         public IActionResult GameCriteria()
         {
+            _logger.LogInformation("{Category}: {User} visited the Game Criteria page.", "UserActivity", User.Identity?.Name ?? "Anonymous");
             return View();
         }
 
