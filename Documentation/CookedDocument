@@ -23,6 +23,15 @@ Testing is "done" when:
 2. The test has been executed and results are recorded, specifying whether the test passed or failed and/or any unexpected behavior. 
 3. The test has been reviewed and approved by at least one team member.
 
+Story Point Estimations:
+
+Story Points  |  Estimated Time
+    0.5       =    30 minutes
+     1        =     1 hour
+     2        =     2 hours
+     3        =     3 hours
+     4        =     4 hours
+
 
 Calculated Target Velocity:
 Each developer has 5  hours. Times that by 8 to get 40. Because no one is 100% productive, multiply that by 0.6 to get 24 hours. So the CTV is 24 hours.
