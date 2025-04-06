@@ -31,7 +31,7 @@ namespace BucStop.Controllers
             _playCountManager = new PlayCountManager(_gameService.GetGames() ?? new List<Game>(), webHostEnvironment);
 
             //start the async pull of the games info
-            gamesAsync = GetGamesWithInfo(); 
+            gamesAsync = GetGamesWithInfo();
         }
 
         //Takes the user to the index page, passing the games list as an argument
@@ -44,13 +44,17 @@ namespace BucStop.Controllers
             stopwatch.Start();
 
             //await the async gamesinfo
-            List<Game> games = await gamesAsync; 
+            List<Game> games = await gamesAsync;
 
             //have to update playcounts here since the we are reading it dynamically now instead of from a static list
             foreach(Game game in games)
             {
                 game.PlayCount = _playCountManager.GetPlayCount(game.Id);
             }
+
+            // Sort games by their Id so that they always appear in order on the games page
+            // Sorting here means that every refresh will re-sort the games but allows sorting by PlayCount if needed.
+            games.Sort((x, y) => x.Id.CompareTo(y.Id));
 
             stopwatch.Stop();
 
