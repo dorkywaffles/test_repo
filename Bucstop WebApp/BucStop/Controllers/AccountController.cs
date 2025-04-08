@@ -30,6 +30,18 @@ namespace BucStop.Controllers
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                ModelState.AddModelError(string.Empty, "Please enter your email.");
+
+                _logger.LogWarning("{Category}: Empty email entered during login attempt.", "InvalidLogin");
+
+                stopwatch.Stop();
+                _logger.LogInformation("{Category}: Empty Email Login Page Loaded in {LoadTime}ms.", "PageLoadTimes", stopwatch.ElapsedMilliseconds);
+
+                return View();
+            }
+
             //ToLower added to remove case sensitivity. Current Font makes all lettering look like capital letters.
             if (Regex.IsMatch(email.ToLower(), @"\b[A-Za-z0-9._%+-]+@etsu\.edu\b"))
             {

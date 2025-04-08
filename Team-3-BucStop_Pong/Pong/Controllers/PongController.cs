@@ -19,7 +19,8 @@ namespace Pong
             new GameInfo { 
                 Id = 3,
                 Title = "Pong",
-                Content = "~/js/pong.js",
+                //Content = "~/js/pong.js",
+                Content = "https://localhost:1941/js/pong.js",
                 Author = "Fall 2023 Semester",
                 DateAdded = "",
                 Description = "Pong is a classic arcade game where the player uses a paddle to hit a ball against a computer's paddle. Either party scores when the ball makes it past the opponent's paddle.",
