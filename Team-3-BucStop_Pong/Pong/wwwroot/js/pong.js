@@ -1,4 +1,4 @@
-﻿/* 
+/* 
  * Ping-Pong Fever!
  * 
  * Base game created by straker on GitHub
