@@ -15,6 +15,17 @@ namespace Tetris
     [Route("[controller]")]
     public class TetrisController : ControllerBase
     {
+        private readonly ILogger<TetrisController> _logger;
+        private readonly IConfiguration _config;
+        private static string gameURL;
+
+        public TetrisController(ILogger<TetrisController> logger, IConfiguration config)
+        {
+            _logger = logger;
+            _config = config;
+            gameURL = _config["MicroserviceUrls:Tetris"];
+        }
+
         private static readonly List<GameInfo> TheInfo = new List<GameInfo>
         {
             new GameInfo {
@@ -23,9 +34,8 @@ namespace Tetris
                 Title = "Tetris",
                 Author = "Fall 2023 Semester",
                 //Content = "~/js/tetris.js", //changing URL now that the MS hosts game code
-                // need to probably change this url so that it is aware of the environment dynamically?
-                // i think this would mean using one of the app settings variables instead of hard coding
-                Content = "https://localhost:2626/js/tetris.js",
+                //Content = "https://localhost:2626/js/tetris.js",
+                Content = gameURL,
                 DateAdded = "",
                 Description = "Tetris is a classic arcade puzzle game where the player has to arrange falling blocks, also known as Tetronimos, of different shapes and colors to form complete rows on the bottom of the screen. The game gets faster and harder as the player progresses, and ends when the Tetronimos reach the top of the screen.",
                 HowTo = "Control with arrow keys: Up arrow to spin, down to speed up fall, space to insta-drop.",
@@ -33,16 +43,15 @@ namespace Tetris
             }
         };
 
-        private readonly ILogger<TetrisController> _logger;
-
-        public TetrisController(ILogger<TetrisController> logger)
-        {
-            _logger = logger;
-        }
 
         [HttpGet]
         public IEnumerable<GameInfo> Get()
         {
+            // Confirm the Content URL is assigned if it was not available when initialized
+            if (TheInfo[0].Content == null)
+            {
+                TheInfo[0].Content = gameURL;
+            }
             return TheInfo;
         }
     }
