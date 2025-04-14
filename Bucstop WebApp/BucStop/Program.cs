@@ -61,8 +61,8 @@ var app = builder.Build();
 var config = app.Configuration;
 
 var environment = app.Environment.EnvironmentName;
-var gateway = config.GetValue<string>("Gateway");
-var micro = config.GetValue<string>("Micro");
+var gateway = config["Gateway"];
+var micro = config["Micro"];
 
 foreach (var kvp in config.AsEnumerable())
 {

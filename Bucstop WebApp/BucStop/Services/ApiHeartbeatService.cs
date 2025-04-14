@@ -5,6 +5,7 @@ using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using BucStop.Models;
 
 namespace BucStop.Services
 {
@@ -12,16 +13,15 @@ namespace BucStop.Services
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<ApiHeartbeatService> _logger;
+        private readonly IConfiguration _config;
         private readonly string _healthCheckUrl;
 
-        public ApiHeartbeatService(
-            HttpClient httpClient,
-            ILogger<ApiHeartbeatService> logger,
-            IConfiguration configuration) // inject config here
+        public ApiHeartbeatService(HttpClient httpClient, ILogger<ApiHeartbeatService> logger, IConfiguration config)
         {
             _httpClient = httpClient;
             _logger = logger;
-            var gateway = configuration.GetValue<string>("Gateway");
+            _config = config;
+            var gateway = _config["Gateway"];
             _healthCheckUrl = $"{gateway}/health";
         }
 
