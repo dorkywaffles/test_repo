@@ -10,9 +10,7 @@ services:
     networks:
       - bucstop-network
     environment:
-      - ASPNETCORE_URLS=http://+:80
-      - DOTNET_USE_POLLING_FILE_WATCHER=1
-      - ASPNETCORE_HTTPS_PORT=
+      - DOTNET_ENVIRONMENT=containers
     depends_on:
       - api-gateway
 
@@ -25,6 +23,8 @@ services:
       - "8081:80" # Expose API Gateway on localhost:8081
     networks:
       - bucstop-network
+    environment:
+      - DOTNET_ENVIRONMENT=containers
     depends_on:
       - snake
       - pong
@@ -35,6 +35,8 @@ services:
       context: ./Team-3-BucStop_Snake/Snake
       dockerfile: Dockerfile
     container_name: game-snake
+    environment:
+      - DOTNET_ENVIRONMENT=containers
     ports:
       - "8082:80" # Expose Snake microservice on localhost:8082
     networks:
@@ -45,6 +47,8 @@ services:
       context: ./Team-3-BucStop_Pong/Pong
       dockerfile: Dockerfile
     container_name: game-pong
+    environment:
+      - DOTNET_ENVIRONMENT=containers
     ports:
       - "8083:80" # Expose Pong microservice on localhost:8083
     networks:
@@ -55,6 +59,8 @@ services:
       context: ./Team-3-BucStop_Tetris/Tetris
       dockerfile: Dockerfile
     container_name: game-tetris
+    environment:
+      - DOTNET_ENVIRONMENT=containers
     ports:
       - "8084:80" # Expose Tetris microservice on localhost:8084
     networks:
