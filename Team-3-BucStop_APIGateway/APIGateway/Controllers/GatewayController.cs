@@ -16,11 +16,13 @@ namespace Gateway
         private readonly ILogger<GatewayController> _logger;
         private readonly IConfiguration _config;
         private readonly List<GameInfo> _gameInfos;
+        private readonly IHostEnvironment _host;
 
-        public GatewayController(ILogger<GatewayController> logger, IConfiguration config)
+        public GatewayController(ILogger<GatewayController> logger, IConfiguration config, IHostEnvironment host)
         {
             _logger = logger;
             _config = config;
+            _host = host;
             _gameInfos = new List<GameInfo>();
         }
 
@@ -34,7 +36,19 @@ namespace Gateway
                 var fetchTasks = new List<Task>();
                 foreach (var game in gameKeys)
                 {
-                    var internalUrl = _config[$"Microservices:{game}"];
+                    string internalUrl;
+
+                    if (_host.IsDevelopment())
+                    {
+                        internalUrl = _config[$"PublicUrls:{game}"];
+                        _logger.LogInformation($"Using Development URL for {game}: {internalUrl}");
+                    }
+                    else
+                    {
+                        internalUrl = _config[$"Microservices:{game}"];
+                        _logger.LogInformation($"Using Container URL for {game}: {internalUrl}");
+                    }
+
                     var publicUrl = _config[$"PublicUrls:{game}"];
                     var jsPath = $"/js/{game.ToLowerInvariant()}.js";
 
