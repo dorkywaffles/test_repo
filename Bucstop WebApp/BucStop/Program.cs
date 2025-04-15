@@ -38,15 +38,15 @@ builder.Host.UseSerilog();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var provider=builder.Services.BuildServiceProvider();
-var configuration=provider.GetRequiredService<IConfiguration>();
+// var provider=builder.Services.BuildServiceProvider();
+// var configuration=provider.GetRequiredService<IConfiguration>();
 
 builder.Services.AddHttpClient<MicroClient>(client =>
 {
-    var baseAddress = new Uri(configuration.GetValue<string>("Gateway"));
-
+    var baseAddress = new Uri(builder.Configuration.GetValue<string>("Gateway"));
     client.BaseAddress = baseAddress;
 });
+
 
 builder.Services.AddAuthentication("CustomAuthenticationScheme").AddCookie("CustomAuthenticationScheme", options =>
 {
@@ -58,6 +58,17 @@ builder.Services.AddHostedService<ApiHeartbeatService>();
 
 var app = builder.Build();
 
+var config = app.Configuration;
+
+var environment = app.Environment.EnvironmentName;
+var gateway = config["Gateway"];
+var micro = config["Micro"];
+
+foreach (var kvp in config.AsEnumerable())
+{
+    Log.Debug("{Key} = {Value}", kvp.Key, kvp.Value);
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -66,7 +77,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
