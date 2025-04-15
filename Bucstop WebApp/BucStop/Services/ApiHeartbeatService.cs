@@ -1,9 +1,11 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration; // added this
 using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using BucStop.Models;
 
 namespace BucStop.Services
 {
@@ -11,12 +13,16 @@ namespace BucStop.Services
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<ApiHeartbeatService> _logger;
-        private readonly string _healthCheckUrl = "https://localhost:4141/health"; // API Gateway health endpoint
+        private readonly IConfiguration _config;
+        private readonly string _healthCheckUrl;
 
-        public ApiHeartbeatService(HttpClient httpClient, ILogger<ApiHeartbeatService> logger)
+        public ApiHeartbeatService(HttpClient httpClient, ILogger<ApiHeartbeatService> logger, IConfiguration config)
         {
             _httpClient = httpClient;
             _logger = logger;
+            _config = config;
+            var gateway = _config["Gateway"];
+            _healthCheckUrl = $"{gateway}/health";
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
