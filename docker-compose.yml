@@ -10,7 +10,7 @@ services:
     networks:
       - bucstop-network
     environment:
-      - DOTNET_ENVIRONMENT=containers
+      - DOTNET_ENVIRONMENT=${env}
     depends_on:
       - api-gateway
 
@@ -24,7 +24,7 @@ services:
     networks:
       - bucstop-network
     environment:
-      - DOTNET_ENVIRONMENT=containers
+      - DOTNET_ENVIRONMENT=${env}
     depends_on:
       - snake
       - pong
@@ -36,7 +36,7 @@ services:
       dockerfile: Dockerfile
     container_name: game-snake
     environment:
-      - DOTNET_ENVIRONMENT=containers
+      - DOTNET_ENVIRONMENT=${env}
     ports:
       - "8082:80" # Expose Snake microservice on localhost:8082
     networks:
@@ -48,7 +48,7 @@ services:
       dockerfile: Dockerfile
     container_name: game-pong
     environment:
-      - DOTNET_ENVIRONMENT=containers
+      - DOTNET_ENVIRONMENT=${env}
     ports:
       - "8083:80" # Expose Pong microservice on localhost:8083
     networks:
@@ -60,7 +60,7 @@ services:
       dockerfile: Dockerfile
     container_name: game-tetris
     environment:
-      - DOTNET_ENVIRONMENT=containers
+      - DOTNET_ENVIRONMENT=${env}
     ports:
       - "8084:80" # Expose Tetris microservice on localhost:8084
     networks:
