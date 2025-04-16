@@ -18,12 +18,14 @@ namespace Tetris
         private readonly ILogger<TetrisController> _logger;
         private readonly IConfiguration _config;
         private static string gameURL;
+        private static string imgURL;
 
         public TetrisController(ILogger<TetrisController> logger, IConfiguration config)
         {
             _logger = logger;
             _config = config;
             gameURL = _config["MicroserviceUrls:Tetris"];
+            imgURL = _config["MicroserviceUrls:Image"];
         }
 
         private static readonly List<GameInfo> TheInfo = new List<GameInfo>
@@ -39,7 +41,8 @@ namespace Tetris
                 DateAdded = "",
                 Description = "Tetris is a classic arcade puzzle game where the player has to arrange falling blocks, also known as Tetronimos, of different shapes and colors to form complete rows on the bottom of the screen. The game gets faster and harder as the player progresses, and ends when the Tetronimos reach the top of the screen.",
                 HowTo = "Control with arrow keys: Up arrow to spin, down to speed up fall, space to insta-drop.",
-                Thumbnail = "/images/tetris.jpg"
+                //Thumbnail = "/images/tetris.jpg"
+                Thumbnail = imgURL
             }
         };
 
@@ -47,10 +50,15 @@ namespace Tetris
         [HttpGet]
         public IEnumerable<GameInfo> Get()
         {
-            // Confirm the Content URL is assigned if it was not available when initialized
+            // Confirm the Content and Thumbnail URLs are assigned if they were not available when initialized
             if (TheInfo[0].Content == null)
             {
                 TheInfo[0].Content = gameURL;
+            }
+
+            if (TheInfo[0].Thumbnail == null)
+            {
+                TheInfo[0].Thumbnail = imgURL;
             }
             return TheInfo;
         }

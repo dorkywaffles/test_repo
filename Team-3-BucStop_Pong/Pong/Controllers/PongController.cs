@@ -17,17 +17,19 @@ namespace Pong
         private readonly ILogger<PongController> _logger;
         private readonly IConfiguration _config;
         private static string gameURL;
+        private static string imgURL;
 
         public PongController(ILogger<PongController> logger, IConfiguration config)
         {
             _logger = logger;
             _config = config;
             gameURL = _config["MicroserviceUrls:Pong"];
+            imgURL = _config["MicroserviceUrls:Image"];
         }
 
         private static readonly List<GameInfo> TheInfo = new List<GameInfo>
         {
-            new GameInfo { 
+            new GameInfo {
                 Id = 3,
                 Title = "Pong",
                 //Content = "~/js/pong.js",
@@ -37,7 +39,8 @@ namespace Pong
                 DateAdded = "",
                 Description = "Pong is a classic arcade game where the player uses a paddle to hit a ball against a computer's paddle. Either party scores when the ball makes it past the opponent's paddle.",
                 HowTo = "Control with arrow keys.",
-                Thumbnail = "/images/pong.jpg"
+                //Thumbnail = "/images/pong.jpg"
+                Thumbnail = imgURL
             }
 
         };
@@ -45,10 +48,15 @@ namespace Pong
         [HttpGet]
         public IEnumerable<GameInfo> Get()
         {
-            // Confirm the Content URL is assigned if it was not available when initialized
+            // Confirm the Content and Thumbnail URLs are assigned if they were not available when initialized
             if (TheInfo[0].Content == null)
             {
                 TheInfo[0].Content = gameURL;
+            }
+
+            if (TheInfo[0].Thumbnail == null)
+            {
+                TheInfo[0].Thumbnail = imgURL;
             }
             return TheInfo;
         }
