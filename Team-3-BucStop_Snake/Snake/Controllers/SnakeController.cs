@@ -17,6 +17,7 @@ namespace Snake
         private readonly ILogger<SnakeController> _logger;
         private readonly IConfiguration _config;
         private static string gameURL;
+        private static string imgURL;
 
 
         public SnakeController(ILogger<SnakeController> logger, IConfiguration config)
@@ -24,6 +25,7 @@ namespace Snake
             _logger = logger;
             _config = config;
             gameURL = _config["MicroserviceUrls:Snake"];
+            imgURL = _config["MicroserviceUrls:Image"];
         }
 
 
@@ -39,7 +41,8 @@ namespace Snake
                 DateAdded = "",
                 Description = "Snake is a classic arcade game that challenges the player to control a snake-like creature that grows longer as it eats apples. The player must avoid hitting the walls or the snake's own body, which can end the game.\r\n",
                 HowTo = "Control with arrow keys.",
-                Thumbnail = "/images/snake.jpg" //640x360 resolution
+                //Thumbnail = "/images/snake.jpg" //640x360 resolution
+                Thumbnail = imgURL
             }
 
         };
