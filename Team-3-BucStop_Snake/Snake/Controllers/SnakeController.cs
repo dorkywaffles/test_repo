@@ -50,10 +50,15 @@ namespace Snake
         [HttpGet]
         public IEnumerable<GameInfo> Get()
         {
-            // Confirm the Content URL is assigned if it was not available when initialized
+            // Confirm the Content and Thumbnail URLs are assigned if they were not available when initialized
             if (TheInfo[0].Content == null)
             {
                 TheInfo[0].Content = gameURL;
+            }
+
+            if (TheInfo[0].Thumbnail == null)
+            {
+                TheInfo[0].Thumbnail = imgURL;
             }
             return TheInfo;
         }
