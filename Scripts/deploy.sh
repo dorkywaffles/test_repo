@@ -1,5 +1,5 @@
 #!/bin/bash
-export ASPNETCORE_ENVIRONMENT=Production
+export env=containers
 # ─────────────────────────────────────────────────────────────
 #  Config / Constants
 # ─────────────────────────────────────────────────────────────

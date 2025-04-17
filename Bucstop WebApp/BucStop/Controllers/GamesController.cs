@@ -1,4 +1,4 @@
-﻿using BucStop.Models;
+﻿﻿using BucStop.Models;
 using BucStop.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -81,7 +81,8 @@ namespace BucStop.Controllers
                 _logger.LogWarning("{Category}: Game with ID {GameId} not found.", "GameSuccess", id);
                 return NotFound();
             }
-
+            // Log the URL of the game being loaded
+            _logger.LogInformation("Loading game URL: {GameUrl}", game.Content);
             // Increment the play count for the game with the specified ID
             _playCountManager.IncrementPlayCount(id);
 
@@ -135,6 +136,9 @@ namespace BucStop.Controllers
                         game.DateAdded = info.DateAdded;
                         game.Description = $"{info.Description} \n {info.DateAdded}";
                         game.LeaderBoard = info.LeaderBoard;
+
+                        _logger.LogInformation("Game ID {Id} Content URL: {Content}", info.Id, info.Content);
+
                     }
 
                     games.Add(game);
@@ -144,6 +148,7 @@ namespace BucStop.Controllers
             {
                 _logger.LogError(ex, "Error retrieving game information from API.");
             }
+
 
             return games;
         }
