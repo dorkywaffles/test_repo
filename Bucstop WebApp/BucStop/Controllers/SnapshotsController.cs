@@ -70,37 +70,69 @@ namespace BucStop.Controllers
 
                 foreach (var path in pageLoadLogPaths)
                 {
-                    if (System.IO.File.Exists(path))
+                    try
                     {
-                        var content = await System.IO.File.ReadAllTextAsync(path);
-                        snapshot.Logs[$"page_load:{Path.GetFileName(path)}"] = content;
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"page_load:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
                     }
                 }
 
                 foreach (var path in userActivityLogPaths)
                 {
-                    if (System.IO.File.Exists(path))
+                    try
                     {
-                        var content = await System.IO.File.ReadAllTextAsync(path);
-                        snapshot.Logs[$"user_activity:{Path.GetFileName(path)}"] = content;
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"user_activity:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
                     }
                 }
 
                 foreach (var path in gameSuccessLogPaths)
                 {
-                    if (System.IO.File.Exists(path))
+                    try
                     {
-                        var content = await System.IO.File.ReadAllTextAsync(path);
-                        snapshot.Logs[$"game_success:{Path.GetFileName(path)}"] = content;
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"game_success:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
                     }
                 }
 
                 foreach (var path in apiHeartbeatLogPaths)
                 {
-                    if (System.IO.File.Exists(path))
+                    try
                     {
-                        var content = await System.IO.File.ReadAllTextAsync(path);
-                        snapshot.Logs[$"api_heartbeat:{Path.GetFileName(path)}"] = content;
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"api_heartbeat:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
                     }
                 }
             }
