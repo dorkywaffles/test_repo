@@ -2,6 +2,9 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
 
+ARG GIT_COMMIT
+ENV GIT_COMMIT_HASH=$GIT_COMMIT
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["BucStop.csproj", "."]

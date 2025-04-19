@@ -1,5 +1,6 @@
 #!/bin/bash
 export env=containers
+export GIT_COMMIT=$(git rev-parse HEAD)
 # ─────────────────────────────────────────────────────────────
 #  Config / Constants
 # ─────────────────────────────────────────────────────────────

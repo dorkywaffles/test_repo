@@ -69,6 +69,7 @@
 <div class="container mt-4 snapshots-container">
     <h1>Snapshot Details</h1>
     <p>Detailed view of the system snapshot</p>
+    <p>Current Git Commit: @ViewBag.GitHash</p>
 
     <div class="card">
         <div class="card-header">
@@ -80,7 +81,7 @@
                 <dd class="col-sm-9">@Model.Id</dd>
 
                 <dt class="col-sm-3">Git Commit Hash</dt>
-                <dd class="col-sm-9">@Model.GitCommit?.Substring(0, 7)</dd>
+                <dd class="col-sm-9">@Model.GitCommit</dd>
 
                 <dt class="col-sm-3">Timestamp</dt>
                 <dd class="col-sm-9">@Model.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")</dd>

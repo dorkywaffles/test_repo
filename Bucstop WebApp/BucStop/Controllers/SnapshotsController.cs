@@ -18,23 +18,39 @@ namespace BucStop.Controllers
         private readonly GameService _gameService;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ILogger<SnapshotsController> _logger;
+        private readonly IHostEnvironment _host;
 
         public SnapshotsController(
             SnapshotService snapshotService,
             IWebHostEnvironment webHostEnvironment,
             GameService gameService,
-            ILogger<SnapshotsController> logger)
+            ILogger<SnapshotsController> logger,
+            IHostEnvironment host)
         {
             _snapshotService = snapshotService;
             _gameService = gameService;
             _webHostEnvironment = webHostEnvironment;
             _logger = logger;
             _playCountManager = new PlayCountManager(_gameService.GetGames() ?? new List<Game>(), webHostEnvironment);
+            _host = host;
         }
 
         public async Task<IActionResult> Index()
         {
             var snapshots = await _snapshotService.GetAllSnapshotsAsync();
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                ViewBag.GitHash = gitHash;
+            }
+            else if (_host.IsDevelopment())
+            {
+                ViewBag.GitHash = GetGitCommitHash();
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
             return View(snapshots);
         }
 
@@ -53,9 +69,23 @@ namespace BucStop.Controllers
             };
 
             // Add Git commit hash info here
-            snapshot.GitCommit = GetGitCommitHash();
-            _logger.LogInformation("Current Git Commit Hash is {CommitHash}", snapshot.GitCommit);
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                snapshot.GitCommit = gitHash;
+                _logger.LogInformation("Current Git Commit Hash is {CommitHash}", snapshot.GitCommit);
+            }
+            else if (_host.IsDevelopment())
+            {
+                snapshot.GitCommit = GetGitCommitHash();
+                _logger.LogInformation("Current Git Commit Hash is {CommitHash}", snapshot.GitCommit);
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
 
+            
             // Get games and their play counts
             var games = _gameService.GetGames();
             if (games != null)
@@ -153,6 +183,19 @@ namespace BucStop.Controllers
             if (snapshot == null)
                 return NotFound();
 
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                ViewBag.GitHash = gitHash;
+            }
+            else if (_host.IsDevelopment())
+            {
+                ViewBag.GitHash = GetGitCommitHash();
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
             return View(snapshot);
         }
 
@@ -164,10 +207,24 @@ namespace BucStop.Controllers
                 return NotFound();
 
             //probably have a check here if the current git commit hash does not match the snapshot.gitcommit info?
-            string currentGitHash = GetGitCommitHash();
+            string currentGitHash = "N/A";
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                currentGitHash = gitHash;
+            }
+            else if (_host.IsDevelopment())
+            {
+                currentGitHash = GetGitCommitHash();
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
+
             if (snapshot.GitCommit != currentGitHash)
             {
-                _logger.LogInformation("Git Commit Hash does not match that of the Snapshot. Snapshot: {SnapshotHash}, Current: {CurrentHash}", snapshot.GitCommit, currentGitHash);
+                _logger.LogInformation("Git Commit Hash does not match that of the Snapshot. \nSnapshot: {SnapshotHash} \nCurrent: {CurrentHash}", snapshot.GitCommit, currentGitHash);
             }
 
             try
