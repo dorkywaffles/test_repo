@@ -121,6 +121,7 @@
             <thead>
                 <tr>
                     <th>Timestamp</th>
+                    <th>Git Commit</th>
                     <th>Description</th>
                     <th>Snake Players</th>
                     <th>Tetris Players</th>
@@ -133,6 +134,7 @@
                 {
                     <tr>
                         <td>@snapshot.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td>@snapshot.GitCommit?.Substring(0, 7)</td>
                         <td>@snapshot.Description</td>
                         <td>@snapshot.PlayerCounts["Snake"]</td>
                         <td>@snapshot.PlayerCounts["Tetris"]</td>

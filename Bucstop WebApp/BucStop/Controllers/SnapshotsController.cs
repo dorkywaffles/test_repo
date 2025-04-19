@@ -6,6 +6,8 @@ using BucStop.Services;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+
 
 namespace BucStop.Controllers
 {
@@ -49,6 +51,10 @@ namespace BucStop.Controllers
                 Timestamp = DateTime.UtcNow,
                 Description = description
             };
+
+            // Add Git commit hash info here
+            snapshot.GitCommit = GetGitCommitHash();
+            _logger.LogInformation("Current Git Commit Hash is {CommitHash}", snapshot.GitCommit);
 
             // Get games and their play counts
             var games = _gameService.GetGames();
@@ -157,6 +163,13 @@ namespace BucStop.Controllers
             if (snapshot == null)
                 return NotFound();
 
+            //probably have a check here if the current git commit hash does not match the snapshot.gitcommit info?
+            string currentGitHash = GetGitCommitHash();
+            if (snapshot.GitCommit != currentGitHash)
+            {
+                _logger.LogInformation("Git Commit Hash does not match that of the Snapshot. Snapshot: {SnapshotHash}, Current: {CurrentHash}", snapshot.GitCommit, currentGitHash);
+            }
+
             try
             {
                 await _playCountManager.RollbackToSnapshot(snapshot.PlayerCounts);
@@ -171,6 +184,26 @@ namespace BucStop.Controllers
             }
 
             return RedirectToAction(nameof(Index));
+        }
+
+        string GetGitCommitHash()
+        {
+            var startInfo = new ProcessStartInfo
+            {
+                FileName = "git",
+                Arguments = "rev-parse HEAD",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            using (var process = new Process { StartInfo = startInfo })
+            {
+                process.Start();
+                string output = process.StandardOutput.ReadToEnd().Trim();
+                process.WaitForExit();
+                return output;
+            }
         }
     }
 } 
