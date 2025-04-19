@@ -113,9 +113,14 @@
         <div class="card-body">
             @foreach (var log in Model.Logs)
             {
+                var collapseId = $"collapse-{log.Key.GetHashCode()}";
                 <div class="mb-3">
-                    <h6 class="text-warning">@log.Key</h6>
-                    <pre class="p-2 rounded"><code>@log.Value</code></pre>
+                    <button class="btn btn-link text-warning p-0" data-bs-toggle="collapse" data-bs-target="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
+                        @log.Key
+                    </button>
+                    <div class="collapse mt-2" id="@collapseId">
+                        <pre class="p-2 rounded bg-light"><code class="text-black">@log.Value</code></pre>
+                    </div>
                 </div>
             }
         </div>

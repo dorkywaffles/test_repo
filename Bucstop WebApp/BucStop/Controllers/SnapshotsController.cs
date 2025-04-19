@@ -63,22 +63,46 @@ namespace BucStop.Controllers
             var logsDirectory = Path.Combine(_webHostEnvironment.ContentRootPath, "Logs");
             if (Directory.Exists(logsDirectory))
             {
-                var pageLoadLogPath = Path.Combine(logsDirectory, "page_load_times.log");
-                var userActivityLogPath = Path.Combine(logsDirectory, "user_activity.log");
-                var gameSuccessLogPath = Path.Combine(logsDirectory, "game_success.log");
-                var apiHeartbeatLogPath = Path.Combine(logsDirectory, "api_heartbeat.log");
+                var pageLoadLogPaths = Directory.GetFiles(logsDirectory, "page_load_times*"); 
+                var userActivityLogPaths = Directory.GetFiles(logsDirectory, "user_activity*");
+                var gameSuccessLogPaths = Directory.GetFiles(logsDirectory, "game_success*");
+                var apiHeartbeatLogPaths = Directory.GetFiles(logsDirectory, "api_heartbeat*");
 
-                if (System.IO.File.Exists(pageLoadLogPath))
-                    snapshot.Logs["page_load"] = await System.IO.File.ReadAllTextAsync(pageLoadLogPath);
-                
-                if (System.IO.File.Exists(userActivityLogPath))
-                    snapshot.Logs["user_activity"] = await System.IO.File.ReadAllTextAsync(userActivityLogPath);
-                
-                if (System.IO.File.Exists(gameSuccessLogPath))
-                    snapshot.Logs["game_success"] = await System.IO.File.ReadAllTextAsync(gameSuccessLogPath);
-                
-                if (System.IO.File.Exists(apiHeartbeatLogPath))
-                    snapshot.Logs["api_heartbeat"] = await System.IO.File.ReadAllTextAsync(apiHeartbeatLogPath);
+                foreach (var path in pageLoadLogPaths)
+                {
+                    if (System.IO.File.Exists(path))
+                    {
+                        var content = await System.IO.File.ReadAllTextAsync(path);
+                        snapshot.Logs[$"page_load:{Path.GetFileName(path)}"] = content;
+                    }
+                }
+
+                foreach (var path in userActivityLogPaths)
+                {
+                    if (System.IO.File.Exists(path))
+                    {
+                        var content = await System.IO.File.ReadAllTextAsync(path);
+                        snapshot.Logs[$"user_activity:{Path.GetFileName(path)}"] = content;
+                    }
+                }
+
+                foreach (var path in gameSuccessLogPaths)
+                {
+                    if (System.IO.File.Exists(path))
+                    {
+                        var content = await System.IO.File.ReadAllTextAsync(path);
+                        snapshot.Logs[$"game_success:{Path.GetFileName(path)}"] = content;
+                    }
+                }
+
+                foreach (var path in apiHeartbeatLogPaths)
+                {
+                    if (System.IO.File.Exists(path))
+                    {
+                        var content = await System.IO.File.ReadAllTextAsync(path);
+                        snapshot.Logs[$"api_heartbeat:{Path.GetFileName(path)}"] = content;
+                    }
+                }
             }
 
             await _snapshotService.SaveSnapshotAsync(snapshot);
