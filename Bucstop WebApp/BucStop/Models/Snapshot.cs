@@ -6,6 +6,7 @@ namespace BucStop.Models
     public class Snapshot
     {
         public string Id { get; set; }
+        public string GitCommit { get; set; }
         public DateTime Timestamp { get; set; }
         public Dictionary<string, int> PlayerCounts { get; set; }
         public Dictionary<string, string> Logs { get; set; }

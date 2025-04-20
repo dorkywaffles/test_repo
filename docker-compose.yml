@@ -10,6 +10,7 @@ services:
       - bucstop-network
     environment:
       - DOTNET_ENVIRONMENT=${env:-containersLocal}
+      - GIT_COMMIT_HASH=${GIT_COMMIT:-unknown}
     depends_on:
       - api-gateway
     volumes:

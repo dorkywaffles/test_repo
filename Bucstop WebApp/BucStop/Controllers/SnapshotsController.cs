@@ -6,6 +6,8 @@ using BucStop.Services;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+
 
 namespace BucStop.Controllers
 {
@@ -16,23 +18,39 @@ namespace BucStop.Controllers
         private readonly GameService _gameService;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ILogger<SnapshotsController> _logger;
+        private readonly IHostEnvironment _host;
 
         public SnapshotsController(
             SnapshotService snapshotService,
             IWebHostEnvironment webHostEnvironment,
             GameService gameService,
-            ILogger<SnapshotsController> logger)
+            ILogger<SnapshotsController> logger,
+            IHostEnvironment host)
         {
             _snapshotService = snapshotService;
             _gameService = gameService;
             _webHostEnvironment = webHostEnvironment;
             _logger = logger;
             _playCountManager = new PlayCountManager(_gameService.GetGames() ?? new List<Game>(), webHostEnvironment);
+            _host = host;
         }
 
         public async Task<IActionResult> Index()
         {
             var snapshots = await _snapshotService.GetAllSnapshotsAsync();
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                ViewBag.GitHash = gitHash;
+            }
+            else if (_host.IsDevelopment())
+            {
+                ViewBag.GitHash = GetGitCommitHash();
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
             return View(snapshots);
         }
 
@@ -50,6 +68,24 @@ namespace BucStop.Controllers
                 Description = description
             };
 
+            // Add Git commit hash info here
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                snapshot.GitCommit = gitHash;
+                _logger.LogInformation("Current Git Commit Hash is {CommitHash}", snapshot.GitCommit);
+            }
+            else if (_host.IsDevelopment())
+            {
+                snapshot.GitCommit = GetGitCommitHash();
+                _logger.LogInformation("Current Git Commit Hash is {CommitHash}", snapshot.GitCommit);
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
+
+            
             // Get games and their play counts
             var games = _gameService.GetGames();
             if (games != null)
@@ -63,22 +99,78 @@ namespace BucStop.Controllers
             var logsDirectory = Path.Combine(_webHostEnvironment.ContentRootPath, "Logs");
             if (Directory.Exists(logsDirectory))
             {
-                var pageLoadLogPath = Path.Combine(logsDirectory, "page_load_times.log");
-                var userActivityLogPath = Path.Combine(logsDirectory, "user_activity.log");
-                var gameSuccessLogPath = Path.Combine(logsDirectory, "game_success.log");
-                var apiHeartbeatLogPath = Path.Combine(logsDirectory, "api_heartbeat.log");
+                var pageLoadLogPaths = Directory.GetFiles(logsDirectory, "page_load_times*"); 
+                var userActivityLogPaths = Directory.GetFiles(logsDirectory, "user_activity*");
+                var gameSuccessLogPaths = Directory.GetFiles(logsDirectory, "game_success*");
+                var apiHeartbeatLogPaths = Directory.GetFiles(logsDirectory, "api_heartbeat*");
 
-                if (System.IO.File.Exists(pageLoadLogPath))
-                    snapshot.Logs["page_load"] = await System.IO.File.ReadAllTextAsync(pageLoadLogPath);
-                
-                if (System.IO.File.Exists(userActivityLogPath))
-                    snapshot.Logs["user_activity"] = await System.IO.File.ReadAllTextAsync(userActivityLogPath);
-                
-                if (System.IO.File.Exists(gameSuccessLogPath))
-                    snapshot.Logs["game_success"] = await System.IO.File.ReadAllTextAsync(gameSuccessLogPath);
-                
-                if (System.IO.File.Exists(apiHeartbeatLogPath))
-                    snapshot.Logs["api_heartbeat"] = await System.IO.File.ReadAllTextAsync(apiHeartbeatLogPath);
+                foreach (var path in pageLoadLogPaths)
+                {
+                    try
+                    {
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"page_load:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
+                    }
+                }
+
+                foreach (var path in userActivityLogPaths)
+                {
+                    try
+                    {
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"user_activity:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
+                    }
+                }
+
+                foreach (var path in gameSuccessLogPaths)
+                {
+                    try
+                    {
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"game_success:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
+                    }
+                }
+
+                foreach (var path in apiHeartbeatLogPaths)
+                {
+                    try
+                    {
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var content = await reader.ReadToEndAsync();
+                            snapshot.Logs[$"api_heartbeat:{Path.GetFileName(path)}"] = content;
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine($"Could not read {path}: {ex.Message}");
+                    }
+                }
             }
 
             await _snapshotService.SaveSnapshotAsync(snapshot);
@@ -91,6 +183,19 @@ namespace BucStop.Controllers
             if (snapshot == null)
                 return NotFound();
 
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                ViewBag.GitHash = gitHash;
+            }
+            else if (_host.IsDevelopment())
+            {
+                ViewBag.GitHash = GetGitCommitHash();
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
             return View(snapshot);
         }
 
@@ -100,6 +205,27 @@ namespace BucStop.Controllers
             var snapshot = await _snapshotService.GetSnapshotAsync(id);
             if (snapshot == null)
                 return NotFound();
+
+            //probably have a check here if the current git commit hash does not match the snapshot.gitcommit info?
+            string currentGitHash = "N/A";
+            if (_host.IsEnvironment("containers") || _host.IsEnvironment("containersLocal"))
+            {
+                var gitHash = Environment.GetEnvironmentVariable("GIT_COMMIT_HASH") ?? "unknown";
+                currentGitHash = gitHash;
+            }
+            else if (_host.IsDevelopment())
+            {
+                currentGitHash = GetGitCommitHash();
+            }
+            else
+            {
+                _logger.LogInformation("Unable to get Git Commit Hash info. Environment variable cannot be detected.");
+            }
+
+            if (snapshot.GitCommit != currentGitHash)
+            {
+                _logger.LogInformation("Git Commit Hash does not match that of the Snapshot. \nSnapshot: {SnapshotHash} \nCurrent: {CurrentHash}", snapshot.GitCommit, currentGitHash);
+            }
 
             try
             {
@@ -115,6 +241,26 @@ namespace BucStop.Controllers
             }
 
             return RedirectToAction(nameof(Index));
+        }
+
+        string GetGitCommitHash()
+        {
+            var startInfo = new ProcessStartInfo
+            {
+                FileName = "git",
+                Arguments = "rev-parse HEAD",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            using (var process = new Process { StartInfo = startInfo })
+            {
+                process.Start();
+                string output = process.StandardOutput.ReadToEnd().Trim();
+                process.WaitForExit();
+                return output;
+            }
         }
     }
 } 

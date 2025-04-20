@@ -97,6 +97,8 @@
 <div class="container mt-4 snapshots-container">
     <h1>System Snapshots</h1>
     <p>View and manage system state snapshots</p>
+    <p>Current Git Commit: @ViewBag.GitHash?.Substring(0, 7)</p>
+
 
     @if (TempData["SuccessMessage"] != null)
     {
@@ -121,6 +123,7 @@
             <thead>
                 <tr>
                     <th>Timestamp</th>
+                    <th>Git Commit</th>
                     <th>Description</th>
                     <th>Snake Players</th>
                     <th>Tetris Players</th>
@@ -133,6 +136,7 @@
                 {
                     <tr>
                         <td>@snapshot.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td>@snapshot.GitCommit?.Substring(0, 7)</td>
                         <td>@snapshot.Description</td>
                         <td>@snapshot.PlayerCounts["Snake"]</td>
                         <td>@snapshot.PlayerCounts["Tetris"]</td>
@@ -141,7 +145,14 @@
                             <div class="btn-group">
                                 <a asp-action="Details" asp-route-id="@snapshot.Id" class="btn btn-details btn-sm">Details</a>
                                 <form asp-action="Rollback" asp-route-id="@snapshot.Id" method="post" style="display: inline;">
-                                    <button type="submit" class="btn btn-rollback btn-sm" onclick="return confirm('Are you sure you want to rollback to this snapshot? This will update all player counts.');">
+                                    @{
+                                        var isDifferentCommit = ViewBag.GitHash != null && snapshot.GitCommit != null && ViewBag.GitHash != snapshot.GitCommit;
+                                        var baseMessage = "Are you sure you want to rollback to this snapshot? This will update all player counts.";
+                                        var extraMessage = "Warning: This snapshot is from a different Git commit. Continue anyway?";
+                                        var fullMessage = isDifferentCommit ? $"{baseMessage}\\n\\n{extraMessage}" : baseMessage;
+                                    }
+                                    <button type="submit" class="btn btn-rollback btn-sm"
+                                            onclick="return confirm('@fullMessage');">
                                         Rollback
                                     </button>
                                 </form>
