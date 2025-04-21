@@ -79,7 +79,7 @@ cleanup() {
         echo -e "\n🧹  Stopping Docker containers..."
         docker-compose down
 
-        echo -e "\n✂️   Pruning unused Docker resources..."
+        echo -e "\n✂️ Pruning unused Docker resources..."
         docker system prune -af --volumes | awk '
             /Deleted Images:/ { skip=1; next }
             /Deleted build cache objects:/ { skip=1; next }
