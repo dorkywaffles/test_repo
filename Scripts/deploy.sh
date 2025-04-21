@@ -68,6 +68,14 @@ cleanup() {
             kill "$BUILD_PID" 2>/dev/null
         fi
 
+        # Create Snapshot 
+        create_snapshot() {
+        echo "Creating snapshot..."
+        curl -X POST http://3.232.16.65:8080//snapshots/create -d "description=Automated snapshot before shutdown"
+        }
+
+        create_snapshot
+
         echo -e "\n🧹  Stopping Docker containers..."
         docker-compose down
 
