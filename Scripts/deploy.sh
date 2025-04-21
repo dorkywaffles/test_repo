@@ -70,16 +70,16 @@ cleanup() {
 
         # Create Snapshot 
         create_snapshot() {
-        echo "📷Creating snapshot..."
+        echo "📷    Creating snapshot..."
         curl -X POST http://3.232.16.65:8080/snapshots/create -d "description=Automated snapshot before shutdown" 2>/dev/null
         }
 
         create_snapshot
 
-        echo -e "\n🧹  Stopping Docker containers..."
+        echo -e "\n🧹   Stopping Docker containers..."
         docker-compose down
 
-        echo -e "\n🫼  Pruning unused Docker resources..."
+        echo -e "\n✂️   Pruning unused Docker resources..."
         docker system prune -af --volumes | awk '
             /Deleted Images:/ { skip=1; next }
             /Deleted build cache objects:/ { skip=1; next }
