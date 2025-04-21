@@ -76,7 +76,7 @@ cleanup() {
 
         create_snapshot
 
-        echo -e "\n🧹   Stopping Docker containers..."
+        echo -e "\n🧹  Stopping Docker containers..."
         docker-compose down
 
         echo -e "\n✂️   Pruning unused Docker resources..."
