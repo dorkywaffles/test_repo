@@ -1,16 +1,16 @@
 ## BucStop-Goofin 
-BucStop-Goofin is a project in SWE II 
-## COOKED
+BucStop-Goofin is a project in __SWE II__
+## __COOKED__
 [Cooked Document](https://docs.google.com/document/d/1pb71CN0g1qTX_UeYtdQbtx5hV6SlRyxDWjgN2buedjY/edit?tab=t.0) 
 ### *ISN'T FOR PRODUCTION, still in __testing__*
 BucStop-Goofin is a project worked on by the Cooked team, 
 our team took __BucStop__ from another repo and made it our own.
 
-We have made the project to be launched on AWS and containerized and hopefully un-containerized. 
+We have made the project to be launched on __AWS and containerized and hopefully un-containerized__. 
 #### We decoupled each game from the _WebApp_ including 
-- [x]  Pong 
-- [x]  Tetris
-- [x]  Snake
+- [x]  __Pong__
+- [x]  __Tetris__
+- [x]  __Snake__
  *Each game above has been decouple* 
 ###### After decoupling, we utilize *Serilog* to log microservices within the terminal.
 
@@ -27,11 +27,11 @@ We have made the project to be launched on AWS and containerized and hopefully u
 ### Creating an AWS Account
 - Go to [AWS](https://aws.amazon.com/)
 - Click on *Create an AWS Account*
-- Fill out the form
-- Verify your email
-- Verify your phone number
-- Choose a support plan
-- Enter your payment information
+- __Fill out the form__
+- Verify your *email*
+- Verify your *phone number*
+- Choose a *support plan*
+- Enter your *payment information*
 - Click on *Create Account and Continue*
 
 ### Creating Security Groups
@@ -39,17 +39,17 @@ We have made the project to be launched on AWS and containerized and hopefully u
 - Go to the [EC2 Console](https://console.aws.amazon.com/ec2/v2/home)
 - Click on *Security Groups*
 - Click on *Create Security Group*
-- Fill out the form
+- __Fill out the form__
 - Click on *Create Security Group*
 - Click on *Inbound Rules*
 - Click on *Edit Inbound Rules*
 - Click on *Add Rule*
-- Fill out the form
+- __Fill out the form__
 - Click on *Save Rules*
 - Click on *Outbound Rules*
 - Click on *Edit Outbound Rules*
 - Click on *Add Rule*
-- Fill out the form
+- __Fill out the form__
 - Click on *Save Rules*
 ### Creating an EC2 Instance
 - Give it a *Name*
@@ -58,5 +58,5 @@ We have made the project to be launched on AWS and containerized and hopefully u
 - Choose the *Instance Type*
 	- Choose the smallest type, unless you can afford it
 - Choose the *Security Groups*
-	- Choose the default security
-- Choose Launch Instance
+	- Choose the *default security**
+- Choose *Launch Instance**
