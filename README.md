@@ -12,9 +12,9 @@ We have made the project to be launched on __AWS and containerized and hopefully
 - [x]  __Tetris__
 - [x]  __Snake__
 - *Each game above has been decouple* 
-###### After decoupling, we utilize *Serilog* to log microservices within the terminal.
+#### After decoupling, we utilize *Serilog* to log microservices within the terminal.
 
-###### Some research was done on *AWS*, *Docker*, *API Gateway*, Games, etc to help us understand how to deploy the project.
+#### Some research was done on *AWS*, *Docker*, *API Gateway*, Games, etc to help us understand how to deploy the project.
 - [Running Locally](https://docs.google.com/document/d/1gfUpjZNfqWyv1ohUW1IaS8fOhXp0hOx6tFQVXBADa8Q/edit?tab=t.0#heading=h.i67lbvpl08r4) 
 - [Deploying](https://docs.google.com/document/d/1vDSmWI5piwHRP1R2fOEEBvh1zYa7jaa6UImI4XudnF4/edit?tab=t.0) 
 - [Docker](https://docs.google.com/document/d/1_GlCmkd07uP36IxxsrnldZhiv-XDSLKP3EsULuhrdZw/edit?tab=t.0) 
