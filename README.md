@@ -2,7 +2,7 @@
 BucStop-Goofin is a project in SWE II 
 ## COOKED
 [Cooked Document](https://docs.google.com/document/d/1pb71CN0g1qTX_UeYtdQbtx5hV6SlRyxDWjgN2buedjY/edit?tab=t.0) 
-### *ISN'T FOR PRODUCTION, still in _testing_*
+### *ISN'T FOR PRODUCTION, still in __testing__*
 BucStop-Goofin is a project worked on by the Cooked team, 
 our team took __BucStop__ from another repo and made it our own.
 
