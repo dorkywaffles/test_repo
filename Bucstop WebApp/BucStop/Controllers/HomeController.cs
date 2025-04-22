@@ -12,18 +12,21 @@ namespace BucStop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly GameService _gameService;
+        private readonly MicroClient _httpClient;
+        private List<Game> _games;
 
-        public HomeController(ILogger<HomeController> logger, GameService games)
+        public HomeController(MicroClient microClient, ILogger<HomeController> logger)
         {
             _logger = logger;
-            _gameService = games;
+            _httpClient = microClient;
+            _games = new List<Game>();
         }
 
         //Sends the user to the deprecated Index page.
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_gameService.GetGames());
+            _games = await _httpClient.GetGamesWithInfo();
+            return View(_games);
         }
 
         //Takes the user to the admin page.
