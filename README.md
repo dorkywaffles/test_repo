@@ -61,5 +61,16 @@ We have made the project to be launched on __AWS and containerized and hopefully
 	- Choose the *default security**
 - Choose *Launch Instance**
 
+## Running the Project instances on AWS
+- Go to the [EC2 Console](https://console.aws.amazon.com/ec2/v2/home)
+- Click on the *Instances* you want to run
+- Click the terminal icon
+- Click on the *Connect* button
+- Click on the *SSH Client* tab
+	- Once you are in the terminal, you can run the commands below
+	- Run the following commands
+	- Docker compose up 
+	
+
 # (*__CHICKEN JOCKEY__*)
 ![image](https://i.kym-cdn.com/entries/icons/facebook/000/053/364/chicken-jockey.jpg)
