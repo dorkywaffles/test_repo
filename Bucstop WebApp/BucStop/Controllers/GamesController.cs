@@ -24,7 +24,7 @@ namespace BucStop.Controllers
             _logger = logger;
 
             // Initialize the PlayCountManager with the web root path and the JSON file name
-            _playCountManager = new PlayCountManager(microClient.GetGamesList() ?? new List<Game>(), webHostEnvironment);
+            _playCountManager = new PlayCountManager(_httpClient.GetGamesList() ?? new List<Game>(), webHostEnvironment);
         }
 
         //Takes the user to the index page, passing the games list as an argument
