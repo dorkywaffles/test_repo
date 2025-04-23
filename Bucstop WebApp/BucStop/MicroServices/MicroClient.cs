@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System.Text;
 using BucStop.Models;
+using BucStop.Controllers;
 
 
 namespace BucStop
@@ -25,7 +26,9 @@ namespace BucStop
         {
             this.client = client;
             this._logger = logger;
-            this.gamesList = new List<Game>();
+
+            //Start Asynchronous pull of Games
+            gamesList = GetGamesWithInfo().Result;
         }
 
         /// <summary>
@@ -54,7 +57,6 @@ namespace BucStop
         // Converts the GameInfo objects gathered from GetGamesAsync() into Game objects to pass to controllers.
         public async Task<List<Game>> GetGamesWithInfo()
         {
-
             List<Game> games = new List<Game>();
 
             try
@@ -91,7 +93,6 @@ namespace BucStop
                     }
 
                     games.Add(game);
-                    gamesList.Add(game);
                 }
             }
             catch (Exception ex)
@@ -105,12 +106,7 @@ namespace BucStop
         // Return the private gamesList object.
         public List<Game> GetGamesList()
         {
-            while (gamesList == null)
-            {
-                GetGamesWithInfo();
-            }
-
-            return gamesList;
+            return this.gamesList;
         }
 
         /*
