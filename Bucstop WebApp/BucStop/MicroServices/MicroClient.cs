@@ -21,6 +21,7 @@ namespace BucStop
         private readonly HttpClient client;
         private readonly ILogger<MicroClient> _logger;
         private List<Game> gamesList;
+        private Task<List<Game>> gamesTask;
 
         public MicroClient(HttpClient client, ILogger<MicroClient> logger)
         {
@@ -28,7 +29,7 @@ namespace BucStop
             this._logger = logger;
 
             //Start Asynchronous pull of Games
-            gamesList = GetGamesWithInfo().Result;
+            gamesTask = GetGamesWithInfo();
         }
 
         /// <summary>
@@ -106,6 +107,7 @@ namespace BucStop
         // Return the private gamesList object.
         public List<Game> GetGamesList()
         {
+            gamesList = gamesTask.Result;
             return this.gamesList;
         }
 
