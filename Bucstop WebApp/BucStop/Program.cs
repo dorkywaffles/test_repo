@@ -53,8 +53,14 @@ builder.Services.AddAuthentication("CustomAuthenticationScheme").AddCookie("Cust
     options.LoginPath = "/Account/Login";
 });
 
-builder.Services.AddSingleton<GameService>();
+// Ensure directories exist
+var snapshotsPath = Path.Combine(builder.Environment.ContentRootPath, "Snapshots");
+var logsPath = Path.Combine(builder.Environment.ContentRootPath, "Logs");
+Directory.CreateDirectory(snapshotsPath);
+Directory.CreateDirectory(logsPath);
+
 builder.Services.AddHostedService<ApiHeartbeatService>();
+builder.Services.AddScoped<SnapshotService>();
 
 var app = builder.Build();
 
