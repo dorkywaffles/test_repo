@@ -1,0 +1,4 @@
+2025-09-25 15:08:27.296 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-25 15:08:31.622 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-25 15:08:35.991 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-25 15:08:40.213 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health

@@ -1,0 +1,799 @@
+2025-09-30 12:34:47.250 -04:00 [INF] User profile is available. Using 'C:\Users\kaira\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-30 12:34:47.397 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 12:34:47.407 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 12:34:47.651 -04:00 [INF] Now listening on: https://localhost:7182
+2025-09-30 12:34:47.655 -04:00 [INF] Now listening on: http://localhost:5230
+2025-09-30 12:34:47.726 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-30 12:34:47.729 -04:00 [INF] Hosting environment: Development
+2025-09-30 12:34:47.730 -04:00 [INF] Received HTTP response headers after 316.6598ms - 200
+2025-09-30 12:34:47.732 -04:00 [INF] Content root path: C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\
+2025-09-30 12:34:47.736 -04:00 [INF] End processing HTTP request after 346.7096ms - 200
+2025-09-30 12:34:47.744 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 12:34:47.757 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 12:34:47.760 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 12:34:47.819 -04:00 [INF] Received HTTP response headers after 55.7546ms - 200
+2025-09-30 12:34:47.822 -04:00 [INF] End processing HTTP request after 65.0819ms - 200
+2025-09-30 12:34:47.824 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 12:34:47.829 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 12:34:47.834 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 12:34:48.631 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-30 12:34:48.713 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 12:34:48.757 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-30 12:34:48.771 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:34:48.775 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:34:51.892 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-30 12:34:51.900 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 12:34:51.906 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 12:34:51.974 -04:00 [INF] Received HTTP response headers after 58.3825ms - 200
+2025-09-30 12:34:51.985 -04:00 [INF] End processing HTTP request after 84.8457ms - 200
+2025-09-30 12:34:51.996 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 12:34:53.229 -04:00 [INF] Received HTTP response headers after 4450.1226ms - 200
+2025-09-30 12:34:53.238 -04:00 [INF] End processing HTTP request after 4467.2349ms - 200
+2025-09-30 12:34:53.271 -04:00 [INF] Successfully retrieved 2 games from API.
+2025-09-30 12:34:53.276 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 12:34:53.281 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 12:34:53.306 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 12:34:53.495 -04:00 [INF] Executed ViewResult - view Index executed in 197.6023ms.
+2025-09-30 12:34:53.504 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 4737.64ms
+2025-09-30 12:34:53.510 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 12:34:53.519 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 4893.5226ms
+2025-09-30 12:34:53.519 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-09-30 12:34:53.536 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-30 12:34:53.536 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/hammer.min.js - -
+2025-09-30 12:34:53.537 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - -
+2025-09-30 12:34:53.537 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Logo.png - -
+2025-09-30 12:34:53.547 -04:00 [INF] Sending file. Request path: '/BucStop.styles.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\obj\Debug\net6.0\scopedcss\bundle\BucStop.styles.css'
+2025-09-30 12:34:53.548 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-09-30 12:34:53.549 -04:00 [INF] Sending file. Request path: '/js/hammer.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\js\hammer.min.js'
+2025-09-30 12:34:53.552 -04:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\css\site.css'
+2025-09-30 12:34:53.557 -04:00 [INF] Sending file. Request path: '/Logo.png'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\Logo.png'
+2025-09-30 12:34:53.563 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 200 1124 text/css 26.1555ms
+2025-09-30 12:34:53.566 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 47.3263ms
+2025-09-30 12:34:53.569 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/hammer.min.js - - - 200 24750 application/javascript 32.9805ms
+2025-09-30 12:34:53.574 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - - - 200 1881 text/css 37.0095ms
+2025-09-30 12:34:53.578 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Logo.png - - - 200 11885 image/png 40.5359ms
+2025-09-30 12:34:53.601 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - -
+2025-09-30 12:34:53.604 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-09-30 12:34:53.604 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - -
+2025-09-30 12:34:53.604 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 12:34:53.605 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 12:34:53.606 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/images/background.png - -
+2025-09-30 12:34:53.608 -04:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-09-30 12:34:53.613 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-09-30 12:34:53.613 -04:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\js\site.js'
+2025-09-30 12:34:53.615 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 10.9931ms
+2025-09-30 12:34:53.620 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 18.7260ms
+2025-09-30 12:34:53.623 -04:00 [INF] Sending file. Request path: '/images/background.png'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\images\background.png'
+2025-09-30 12:34:53.624 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 19.1809ms
+2025-09-30 12:34:53.628 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - - - 200 1505 application/javascript 23.2348ms
+2025-09-30 12:34:53.635 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/images/background.png - - - 200 176387 image/png 28.7488ms
+2025-09-30 12:34:53.643 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/fonts/BebasNeue-Regular.ttf - -
+2025-09-30 12:34:53.650 -04:00 [INF] Sending file. Request path: '/fonts/BebasNeue-Regular.ttf'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\fonts\BebasNeue-Regular.ttf'
+2025-09-30 12:34:53.654 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/fonts/BebasNeue-Regular.ttf - - - 200 57676 application/x-font-ttf 11.0224ms
+2025-09-30 12:34:53.694 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 89.3099ms
+2025-09-30 12:34:53.793 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/favicon.ico - -
+2025-09-30 12:34:53.806 -04:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\favicon.ico'
+2025-09-30 12:34:53.809 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/favicon.ico - - - 200 3758 image/x-icon 15.9820ms
+2025-09-30 12:35:04.906 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 12:35:04.925 -04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-30 12:35:04.942 -04:00 [INF] AuthenticationScheme: CustomAuthenticationScheme was challenged.
+2025-09-30 12:35:04.949 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 302 0 - 42.5394ms
+2025-09-30 12:35:04.956 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Account/Login?ReturnUrl=%2FGames - -
+2025-09-30 12:35:04.966 -04:00 [INF] Executing endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-30 12:35:04.972 -04:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller BucStop.Controllers.AccountController (BucStop).
+2025-09-30 12:35:04.980 -04:00 [INF] Executing ViewResult, running view Login.
+2025-09-30 12:35:05.014 -04:00 [INF] Executed ViewResult - view Login executed in 34.9871ms.
+2025-09-30 12:35:05.022 -04:00 [INF] Executed action BucStop.Controllers.AccountController.Login (BucStop) in 43.2321ms
+2025-09-30 12:35:05.030 -04:00 [INF] Executed endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-30 12:35:05.036 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Account/Login?ReturnUrl=%2FGames - - - 200 - text/html;+charset=utf-8 79.5796ms
+2025-09-30 12:35:05.055 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 12:35:05.055 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 12:35:05.060 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 5.1359ms
+2025-09-30 12:35:05.070 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.2127ms
+2025-09-30 12:35:09.588 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 208
+2025-09-30 12:35:09.598 -04:00 [INF] Executing endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-30 12:35:09.622 -04:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller BucStop.Controllers.AccountController (BucStop).
+2025-09-30 12:35:09.663 -04:00 [INF] AuthenticationScheme: CustomAuthenticationScheme signed in.
+2025-09-30 12:35:09.670 -04:00 [INF] UserActivity: ravnborg@etsu.edu successfully logged in.
+2025-09-30 12:35:09.678 -04:00 [INF] PageLoadTimes: Successful Login Page Loaded in 23ms.
+2025-09-30 12:35:09.695 -04:00 [INF] Executing RedirectResult, redirecting to /.
+2025-09-30 12:35:09.704 -04:00 [INF] Executed action BucStop.Controllers.AccountController.Login (BucStop) in 74.1518ms
+2025-09-30 12:35:09.710 -04:00 [INF] Executed endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-30 12:35:09.713 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 208 - 302 0 - 124.9786ms
+2025-09-30 12:35:09.719 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-30 12:35:09.725 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 12:35:09.727 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-30 12:35:09.731 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:35:09.735 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:35:13.816 -04:00 [INF] Received HTTP response headers after 4077.1705ms - 200
+2025-09-30 12:35:13.828 -04:00 [INF] End processing HTTP request after 4097.4218ms - 200
+2025-09-30 12:35:13.836 -04:00 [INF] Successfully retrieved 2 games from API.
+2025-09-30 12:35:13.843 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 12:35:13.851 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 12:35:13.854 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 12:35:13.866 -04:00 [INF] Executed ViewResult - view Index executed in 11.5171ms.
+2025-09-30 12:35:13.877 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 4146.759ms
+2025-09-30 12:35:13.890 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 12:35:13.900 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 4180.8895ms
+2025-09-30 12:35:13.931 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 12:35:13.931 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 12:35:13.936 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 4.7534ms
+2025-09-30 12:35:13.947 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.9911ms
+2025-09-30 12:35:19.421 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 12:35:19.441 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 12:35:19.452 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 12:35:19.462 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:35:19.470 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:35:23.573 -04:00 [INF] Received HTTP response headers after 4099.8546ms - 200
+2025-09-30 12:35:23.585 -04:00 [INF] End processing HTTP request after 4123.2629ms - 200
+2025-09-30 12:35:23.597 -04:00 [INF] Successfully retrieved 2 games from API.
+2025-09-30 12:35:23.604 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 12:35:23.612 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 12:35:23.639 -04:00 [INF] Games index page accessed.
+2025-09-30 12:35:23.649 -04:00 [INF] PageLoadTimes: Games Page Loaded in 1ms.
+2025-09-30 12:35:23.660 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 12:35:23.671 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 12:35:23.684 -04:00 [INF] Executed ViewResult - view Index executed in 15.4297ms.
+2025-09-30 12:35:23.692 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 4232.9989ms
+2025-09-30 12:35:23.701 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 12:35:23.705 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 4284.7473ms
+2025-09-30 12:35:23.723 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 12:35:23.726 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 12:35:23.729 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 2.7088ms
+2025-09-30 12:35:23.732 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.2896ms
+2025-09-30 12:36:35.880 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games/Play/1 - -
+2025-09-30 12:36:35.898 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 12:36:35.911 -04:00 [INF] Route matched with {action = "Play", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Play(Int32) on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 12:36:35.921 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:36:35.930 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 12:36:40.022 -04:00 [INF] Received HTTP response headers after 4087.7805ms - 200
+2025-09-30 12:36:40.035 -04:00 [INF] End processing HTTP request after 4113.1907ms - 200
+2025-09-30 12:36:40.047 -04:00 [INF] Successfully retrieved 2 games from API.
+2025-09-30 12:36:40.050 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 12:36:40.052 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 12:36:40.057 -04:00 [INF] GameSuccess: User requested to play game with ID 1.
+2025-09-30 12:36:40.068 -04:00 [INF] Loading game URL: https://localhost:1948/js/snake.js
+2025-09-30 12:36:40.086 -04:00 [INF] GameSuccess: Game 'Snake' (ID: 1) successfully loaded.
+2025-09-30 12:36:40.093 -04:00 [INF] UserActivity: ravnborg@etsu.edu started playing 'Snake' (ID: 1).
+2025-09-30 12:36:40.100 -04:00 [INF] PageLoadTimes: Snake Page Loaded in 31ms.
+2025-09-30 12:36:40.107 -04:00 [INF] Executing ViewResult, running view Play.
+2025-09-30 12:36:40.111 -04:00 [INF] Executed ViewResult - view Play executed in 5.1494ms.
+2025-09-30 12:36:40.115 -04:00 [INF] Executed action BucStop.Controllers.GamesController.Play (BucStop) in 4194.7412ms
+2025-09-30 12:36:40.119 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 12:36:40.122 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games/Play/1 - - - 200 - text/html;+charset=utf-8 4242.5112ms
+2025-09-30 12:36:40.136 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 12:36:40.136 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 12:36:40.139 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 2.7561ms
+2025-09-30 12:36:40.147 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.7969ms
+2025-09-30 14:56:44.928 -04:00 [INF] User profile is available. Using 'C:\Users\kaira\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-30 14:56:45.049 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 14:56:45.060 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 14:56:45.208 -04:00 [INF] Now listening on: https://localhost:7182
+2025-09-30 14:56:45.214 -04:00 [INF] Now listening on: http://localhost:5230
+2025-09-30 14:56:45.249 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-30 14:56:45.254 -04:00 [INF] Hosting environment: Development
+2025-09-30 14:56:45.256 -04:00 [INF] Content root path: C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\
+2025-09-30 14:56:45.262 -04:00 [INF] Received HTTP response headers after 198.0884ms - 200
+2025-09-30 14:56:45.266 -04:00 [INF] End processing HTTP request after 223.8242ms - 200
+2025-09-30 14:56:45.271 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 14:56:45.278 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 14:56:45.281 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 14:56:45.313 -04:00 [INF] Received HTTP response headers after 29.2747ms - 200
+2025-09-30 14:56:45.320 -04:00 [INF] End processing HTTP request after 42.8744ms - 200
+2025-09-30 14:56:45.324 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 14:56:45.327 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 14:56:45.329 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 14:56:45.372 -04:00 [INF] Received HTTP response headers after 39.807ms - 200
+2025-09-30 14:56:45.378 -04:00 [INF] End processing HTTP request after 50.652ms - 200
+2025-09-30 14:56:45.380 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 14:56:45.384 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 14:56:45.387 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 14:56:45.434 -04:00 [INF] Received HTTP response headers after 44.1153ms - 200
+2025-09-30 14:56:45.443 -04:00 [INF] End processing HTTP request after 58.5157ms - 200
+2025-09-30 14:56:45.447 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 14:56:45.768 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-30 14:56:45.835 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:56:45.880 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-30 14:56:45.893 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:56:45.896 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:56:45.991 -04:00 [INF] Received HTTP response headers after 92.5143ms - 200
+2025-09-30 14:56:45.997 -04:00 [INF] End processing HTTP request after 104.334ms - 200
+2025-09-30 14:56:46.014 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:56:46.020 -04:00 [INF] Game ID 2 Content URL: https://localhost:2626/js/tetris.js
+2025-09-30 14:56:46.027 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:56:46.040 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:56:46.198 -04:00 [INF] Executed ViewResult - view Index executed in 161.1755ms.
+2025-09-30 14:56:46.207 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 319.2454ms
+2025-09-30 14:56:46.212 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:56:46.221 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 457.2100ms
+2025-09-30 14:56:46.261 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-09-30 14:56:46.261 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - -
+2025-09-30 14:56:46.262 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-30 14:56:46.262 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/hammer.min.js - -
+2025-09-30 14:56:46.263 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Logo.png - -
+2025-09-30 14:56:46.280 -04:00 [INF] Sending file. Request path: '/js/hammer.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\js\hammer.min.js'
+2025-09-30 14:56:46.280 -04:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\css\site.css'
+2025-09-30 14:56:46.280 -04:00 [INF] Sending file. Request path: '/Logo.png'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\Logo.png'
+2025-09-30 14:56:46.280 -04:00 [INF] Sending file. Request path: '/BucStop.styles.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\obj\Debug\net6.0\scopedcss\bundle\BucStop.styles.css'
+2025-09-30 14:56:46.282 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-09-30 14:56:46.287 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/hammer.min.js - - - 200 24750 application/javascript 24.5335ms
+2025-09-30 14:56:46.292 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - - - 200 1881 text/css 30.6008ms
+2025-09-30 14:56:46.296 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Logo.png - - - 200 11885 image/png 32.7725ms
+2025-09-30 14:56:46.301 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 200 1124 text/css 39.3082ms
+2025-09-30 14:56:46.305 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - -
+2025-09-30 14:56:46.308 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 46.9906ms
+2025-09-30 14:56:46.323 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-09-30 14:56:46.330 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - -
+2025-09-30 14:56:46.330 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:56:46.331 -04:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-09-30 14:56:46.332 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:56:46.335 -04:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\js\site.js'
+2025-09-30 14:56:46.337 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-09-30 14:56:46.340 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 10.0773ms
+2025-09-30 14:56:46.347 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 41.0985ms
+2025-09-30 14:56:46.347 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/images/background.png - -
+2025-09-30 14:56:46.355 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - - - 200 1505 application/javascript 24.9974ms
+2025-09-30 14:56:46.359 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 35.6285ms
+2025-09-30 14:56:46.373 -04:00 [INF] Sending file. Request path: '/images/background.png'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\images\background.png'
+2025-09-30 14:56:46.377 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/images/background.png - - - 200 176387 image/png 30.7441ms
+2025-09-30 14:56:46.382 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/fonts/BebasNeue-Regular.ttf - -
+2025-09-30 14:56:46.396 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.4703ms
+2025-09-30 14:56:46.397 -04:00 [INF] Sending file. Request path: '/fonts/BebasNeue-Regular.ttf'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\fonts\BebasNeue-Regular.ttf'
+2025-09-30 14:56:46.403 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/fonts/BebasNeue-Regular.ttf - - - 200 57676 application/x-font-ttf 20.9840ms
+2025-09-30 14:56:48.483 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 14:56:48.514 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:56:48.535 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 14:56:48.548 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:56:48.552 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:56:48.601 -04:00 [INF] Received HTTP response headers after 45.0218ms - 200
+2025-09-30 14:56:48.607 -04:00 [INF] End processing HTTP request after 59.4634ms - 200
+2025-09-30 14:56:48.613 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:56:48.616 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:56:48.621 -04:00 [INF] Game ID 2 Content URL: https://localhost:2626/js/tetris.js
+2025-09-30 14:56:48.636 -04:00 [INF] Games index page accessed.
+2025-09-30 14:56:48.641 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 14:56:48.657 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 14:56:48.671 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:56:48.680 -04:00 [INF] Executed ViewResult - view Index executed in 10.1142ms.
+2025-09-30 14:56:48.688 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 140.2745ms
+2025-09-30 14:56:48.697 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:56:48.704 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 221.2186ms
+2025-09-30 14:56:48.723 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:56:48.723 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:56:48.732 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 8.9624ms
+2025-09-30 14:56:48.743 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.1665ms
+2025-09-30 14:57:24.416 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 14:57:24.427 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:57:24.434 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 14:57:24.439 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:24.443 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:24.474 -04:00 [INF] Received HTTP response headers after 28.9315ms - 200
+2025-09-30 14:57:24.484 -04:00 [INF] End processing HTTP request after 44.5692ms - 200
+2025-09-30 14:57:24.489 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:57:24.493 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:57:24.498 -04:00 [INF] Game ID 2 Content URL: https://localhost:2626/js/tetris.js
+2025-09-30 14:57:24.502 -04:00 [INF] Games index page accessed.
+2025-09-30 14:57:24.504 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 14:57:24.507 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 14:57:24.510 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:57:24.514 -04:00 [INF] Executed ViewResult - view Index executed in 3.7964ms.
+2025-09-30 14:57:24.518 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 78.7891ms
+2025-09-30 14:57:24.521 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:57:24.524 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 108.3505ms
+2025-09-30 14:57:24.549 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:57:24.549 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:57:24.552 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 2.7648ms
+2025-09-30 14:57:24.560 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.1509ms
+2025-09-30 14:57:24.780 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/favicon.ico - -
+2025-09-30 14:57:24.787 -04:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\favicon.ico'
+2025-09-30 14:57:24.792 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/favicon.ico - - - 200 3758 image/x-icon 11.5282ms
+2025-09-30 14:57:26.581 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-30 14:57:26.592 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:57:26.599 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-30 14:57:26.611 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:26.614 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:26.640 -04:00 [INF] Received HTTP response headers after 20.949ms - 200
+2025-09-30 14:57:26.646 -04:00 [INF] End processing HTTP request after 34.4847ms - 200
+2025-09-30 14:57:26.652 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:57:26.655 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:57:26.659 -04:00 [INF] Game ID 2 Content URL: https://localhost:2626/js/tetris.js
+2025-09-30 14:57:26.662 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:57:26.667 -04:00 [INF] Executed ViewResult - view Index executed in 4.9483ms.
+2025-09-30 14:57:26.671 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 59.8807ms
+2025-09-30 14:57:26.675 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:57:26.677 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 96.4814ms
+2025-09-30 14:57:26.688 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:57:26.695 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:57:26.697 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 2.2481ms
+2025-09-30 14:57:26.697 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.8572ms
+2025-09-30 14:57:28.833 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 14:57:28.845 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:57:28.853 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 14:57:28.861 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:28.863 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:28.885 -04:00 [INF] Received HTTP response headers after 19.1906ms - 200
+2025-09-30 14:57:28.889 -04:00 [INF] End processing HTTP request after 28.6576ms - 200
+2025-09-30 14:57:28.895 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:57:28.900 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:57:28.904 -04:00 [INF] Game ID 2 Content URL: https://localhost:2626/js/tetris.js
+2025-09-30 14:57:28.908 -04:00 [INF] Games index page accessed.
+2025-09-30 14:57:28.910 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 14:57:28.913 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 14:57:28.918 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:57:28.921 -04:00 [INF] Executed ViewResult - view Index executed in 3.7673ms.
+2025-09-30 14:57:28.925 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 65.1299ms
+2025-09-30 14:57:28.929 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:57:28.932 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 99.2844ms
+2025-09-30 14:57:28.948 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:57:28.949 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:57:28.956 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 6.7719ms
+2025-09-30 14:57:28.960 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.8618ms
+2025-09-30 14:57:34.743 -04:00 [INF] User profile is available. Using 'C:\Users\kaira\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-30 14:57:34.806 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 14:57:34.815 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 14:57:34.918 -04:00 [INF] Now listening on: https://localhost:7182
+2025-09-30 14:57:34.923 -04:00 [INF] Now listening on: http://localhost:5230
+2025-09-30 14:57:34.928 -04:00 [INF] Received HTTP response headers after 107.1934ms - 200
+2025-09-30 14:57:34.933 -04:00 [INF] End processing HTTP request after 132.1104ms - 200
+2025-09-30 14:57:34.940 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 14:57:34.947 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 14:57:34.950 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 14:57:34.956 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-30 14:57:34.959 -04:00 [INF] Hosting environment: Development
+2025-09-30 14:57:34.963 -04:00 [INF] Content root path: C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\
+2025-09-30 14:57:34.973 -04:00 [INF] Received HTTP response headers after 19.4815ms - 200
+2025-09-30 14:57:34.979 -04:00 [INF] End processing HTTP request after 31.1416ms - 200
+2025-09-30 14:57:34.983 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 14:57:34.986 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 14:57:34.991 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 14:57:35.002 -04:00 [INF] Received HTTP response headers after 8.7587ms - 200
+2025-09-30 14:57:35.006 -04:00 [INF] End processing HTTP request after 19.6462ms - 200
+2025-09-30 14:57:35.008 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 14:57:35.010 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 14:57:35.012 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 14:57:35.024 -04:00 [INF] Received HTTP response headers after 9.5969ms - 200
+2025-09-30 14:57:35.027 -04:00 [INF] End processing HTTP request after 16.7214ms - 200
+2025-09-30 14:57:35.030 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 14:57:35.132 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 14:57:35.183 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:57:35.215 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 14:57:35.226 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:35.229 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:57:35.263 -04:00 [INF] Received HTTP response headers after 30.1286ms - 200
+2025-09-30 14:57:35.266 -04:00 [INF] End processing HTTP request after 40.4755ms - 200
+2025-09-30 14:57:35.284 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:57:35.287 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:57:35.296 -04:00 [INF] Games index page accessed.
+2025-09-30 14:57:35.298 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 14:57:35.304 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 14:57:35.316 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:57:35.387 -04:00 [INF] Executed ViewResult - view Index executed in 72.34ms.
+2025-09-30 14:57:35.394 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 172.281ms
+2025-09-30 14:57:35.398 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 14:57:35.406 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:57:35.406 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:57:35.407 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 278.6242ms
+2025-09-30 14:57:35.411 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 5.1396ms
+2025-09-30 14:57:35.441 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.1346ms
+2025-09-30 14:59:49.240 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-30 14:59:49.272 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:59:49.283 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-30 14:59:49.291 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:59:49.295 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:59:49.357 -04:00 [INF] Received HTTP response headers after 57.6413ms - 200
+2025-09-30 14:59:49.363 -04:00 [INF] End processing HTTP request after 71.9201ms - 200
+2025-09-30 14:59:49.369 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:59:49.373 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:59:49.378 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:59:49.474 -04:00 [INF] Executed ViewResult - view Index executed in 96.7213ms.
+2025-09-30 14:59:49.482 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 191.9148ms
+2025-09-30 14:59:49.488 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:59:49.493 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 253.4651ms
+2025-09-30 14:59:49.504 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:59:49.505 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:59:49.509 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 4.3252ms
+2025-09-30 14:59:49.521 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.4031ms
+2025-09-30 14:59:50.374 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games/Play/1 - -
+2025-09-30 14:59:50.403 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 14:59:50.457 -04:00 [INF] Route matched with {action = "Play", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Play(Int32) on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 14:59:50.473 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:59:50.483 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:59:50.539 -04:00 [INF] Received HTTP response headers after 42.5878ms - 200
+2025-09-30 14:59:50.547 -04:00 [INF] End processing HTTP request after 74.4813ms - 200
+2025-09-30 14:59:50.557 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:59:50.563 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:59:50.588 -04:00 [INF] GameSuccess: User requested to play game with ID 1.
+2025-09-30 14:59:50.608 -04:00 [INF] Loading game URL: https://localhost:1948/js/snake.js
+2025-09-30 14:59:50.635 -04:00 [INF] GameSuccess: Game 'Snake' (ID: 1) successfully loaded.
+2025-09-30 14:59:50.642 -04:00 [INF] UserActivity: ravnborg@etsu.edu started playing 'Snake' (ID: 1).
+2025-09-30 14:59:50.646 -04:00 [INF] PageLoadTimes: Snake Page Loaded in 38ms.
+2025-09-30 14:59:50.652 -04:00 [INF] Executing ViewResult, running view Play.
+2025-09-30 14:59:50.657 -04:00 [INF] Executed ViewResult - view Play executed in 6.4563ms.
+2025-09-30 14:59:50.660 -04:00 [INF] Executed action BucStop.Controllers.GamesController.Play (BucStop) in 188.2886ms
+2025-09-30 14:59:50.666 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 14:59:50.670 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games/Play/1 - - - 200 - text/html;+charset=utf-8 295.6860ms
+2025-09-30 14:59:50.693 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:59:50.694 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:59:50.698 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 5.0895ms
+2025-09-30 14:59:50.715 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.6542ms
+2025-09-30 14:59:53.718 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-30 14:59:53.731 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:59:53.740 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-30 14:59:53.757 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:59:53.767 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 14:59:53.825 -04:00 [INF] Received HTTP response headers after 49.2571ms - 200
+2025-09-30 14:59:53.832 -04:00 [INF] End processing HTTP request after 75.6685ms - 200
+2025-09-30 14:59:53.836 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 14:59:53.840 -04:00 [INF] Game ID 1 Content URL: https://localhost:1948/js/snake.js
+2025-09-30 14:59:53.842 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 14:59:53.845 -04:00 [INF] Executed ViewResult - view Index executed in 3.1751ms.
+2025-09-30 14:59:53.849 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 92.3822ms
+2025-09-30 14:59:53.852 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 14:59:53.855 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 136.8160ms
+2025-09-30 14:59:53.865 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 14:59:53.871 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 14:59:53.874 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 2.7573ms
+2025-09-30 14:59:53.884 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.4505ms
+2025-09-30 15:00:11.302 -04:00 [INF] User profile is available. Using 'C:\Users\kaira\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-30 15:00:11.361 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:00:11.371 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:00:11.487 -04:00 [INF] Now listening on: https://localhost:7182
+2025-09-30 15:00:11.492 -04:00 [INF] Now listening on: http://localhost:5230
+2025-09-30 15:00:11.499 -04:00 [INF] Received HTTP response headers after 122.6709ms - 200
+2025-09-30 15:00:11.504 -04:00 [INF] End processing HTTP request after 148.1829ms - 200
+2025-09-30 15:00:11.512 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:00:11.521 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:00:11.526 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-30 15:00:11.528 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:00:11.529 -04:00 [INF] Hosting environment: Development
+2025-09-30 15:00:11.534 -04:00 [INF] Content root path: C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\
+2025-09-30 15:00:11.543 -04:00 [INF] Received HTTP response headers after 12.6528ms - 200
+2025-09-30 15:00:11.546 -04:00 [INF] End processing HTTP request after 25.5211ms - 200
+2025-09-30 15:00:11.549 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:00:11.552 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:00:11.556 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:00:11.581 -04:00 [INF] Received HTTP response headers after 17.2034ms - 200
+2025-09-30 15:00:11.586 -04:00 [INF] End processing HTTP request after 33.7849ms - 200
+2025-09-30 15:00:11.592 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:00:11.596 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:00:11.600 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:00:11.619 -04:00 [INF] Received HTTP response headers after 15.3705ms - 200
+2025-09-30 15:00:11.625 -04:00 [INF] End processing HTTP request after 28.8896ms - 200
+2025-09-30 15:00:11.631 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:00:11.674 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-30 15:00:11.727 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 15:00:11.754 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-30 15:00:11.764 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:00:11.767 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:00:11.798 -04:00 [INF] Received HTTP response headers after 25.1447ms - 200
+2025-09-30 15:00:11.804 -04:00 [INF] End processing HTTP request after 39.8597ms - 200
+2025-09-30 15:00:11.819 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 15:00:11.822 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 15:00:11.831 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 15:00:11.933 -04:00 [INF] Executed ViewResult - view Index executed in 102.8026ms.
+2025-09-30 15:00:11.936 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 174.6763ms
+2025-09-30 15:00:11.940 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-30 15:00:11.952 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 280.8927ms
+2025-09-30 15:00:11.967 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 15:00:11.967 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 15:00:11.974 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 6.8763ms
+2025-09-30 15:00:12.006 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.7033ms
+2025-09-30 15:00:16.916 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 15:00:16.937 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:00:16.951 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 15:00:16.960 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:00:16.963 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:00:17.005 -04:00 [INF] Received HTTP response headers after 36.4065ms - 200
+2025-09-30 15:00:17.011 -04:00 [INF] End processing HTTP request after 50.8888ms - 200
+2025-09-30 15:00:17.017 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 15:00:17.020 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 15:00:17.030 -04:00 [INF] Games index page accessed.
+2025-09-30 15:00:17.035 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 15:00:17.045 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 15:00:17.056 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 15:00:17.071 -04:00 [INF] Executed ViewResult - view Index executed in 15.9353ms.
+2025-09-30 15:00:17.084 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 123.9559ms
+2025-09-30 15:00:17.096 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:00:17.106 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 15:00:17.106 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 190.1296ms
+2025-09-30 15:00:17.119 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 15:00:17.127 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 7.4867ms
+2025-09-30 15:00:17.132 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.3292ms
+2025-09-30 15:05:11.651 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:05:11.658 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:05:11.697 -04:00 [INF] Received HTTP response headers after 32.9456ms - 200
+2025-09-30 15:05:11.702 -04:00 [INF] End processing HTTP request after 51.6636ms - 200
+2025-09-30 15:05:11.708 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:05:11.713 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:05:11.717 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:05:11.748 -04:00 [INF] Received HTTP response headers after 23.2986ms - 200
+2025-09-30 15:05:11.758 -04:00 [INF] End processing HTTP request after 45.5035ms - 200
+2025-09-30 15:05:11.764 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:05:11.772 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:05:11.776 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:05:11.809 -04:00 [INF] Received HTTP response headers after 28.2561ms - 200
+2025-09-30 15:05:11.818 -04:00 [INF] End processing HTTP request after 46.0396ms - 200
+2025-09-30 15:05:11.823 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:05:11.831 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:05:11.838 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:05:11.875 -04:00 [INF] Received HTTP response headers after 29.5373ms - 200
+2025-09-30 15:05:11.880 -04:00 [INF] End processing HTTP request after 49.2834ms - 200
+2025-09-30 15:05:11.883 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:10:11.911 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:10:11.920 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:10:11.960 -04:00 [INF] Received HTTP response headers after 33.7461ms - 200
+2025-09-30 15:10:11.966 -04:00 [INF] End processing HTTP request after 55.8023ms - 200
+2025-09-30 15:10:11.969 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:10:11.971 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:10:11.975 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:10:12.004 -04:00 [INF] Received HTTP response headers after 25.5296ms - 200
+2025-09-30 15:10:12.013 -04:00 [INF] End processing HTTP request after 42.0275ms - 200
+2025-09-30 15:10:12.018 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:10:12.024 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:10:12.032 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:10:12.054 -04:00 [INF] Received HTTP response headers after 14.8187ms - 200
+2025-09-30 15:10:12.060 -04:00 [INF] End processing HTTP request after 36.1546ms - 200
+2025-09-30 15:10:12.064 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:10:12.068 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:10:12.074 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:10:12.093 -04:00 [INF] Received HTTP response headers after 15.624ms - 200
+2025-09-30 15:10:12.101 -04:00 [INF] End processing HTTP request after 33.0178ms - 200
+2025-09-30 15:10:12.105 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:12:05.548 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games/Play/3 - -
+2025-09-30 15:12:05.584 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 15:12:05.620 -04:00 [INF] Route matched with {action = "Play", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Play(Int32) on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 15:12:05.631 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:05.637 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:05.691 -04:00 [INF] Received HTTP response headers after 49.8341ms - 200
+2025-09-30 15:12:05.698 -04:00 [INF] End processing HTTP request after 66.4399ms - 200
+2025-09-30 15:12:05.703 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 15:12:05.705 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 15:12:05.739 -04:00 [INF] GameSuccess: User requested to play game with ID 3.
+2025-09-30 15:12:05.763 -04:00 [INF] Loading game URL: https://localhost:1941/js/pong.js
+2025-09-30 15:12:05.795 -04:00 [INF] GameSuccess: Game 'Pong' (ID: 3) successfully loaded.
+2025-09-30 15:12:05.803 -04:00 [INF] UserActivity: ravnborg@etsu.edu started playing 'Pong' (ID: 3).
+2025-09-30 15:12:05.811 -04:00 [INF] PageLoadTimes: Pong Page Loaded in 48ms.
+2025-09-30 15:12:05.817 -04:00 [INF] Executing ViewResult, running view Play.
+2025-09-30 15:12:05.834 -04:00 [INF] Executed ViewResult - view Play executed in 17.8393ms.
+2025-09-30 15:12:05.846 -04:00 [INF] Executed action BucStop.Controllers.GamesController.Play (BucStop) in 215.8569ms
+2025-09-30 15:12:05.859 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 15:12:05.866 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games/Play/3 - - - 200 - text/html;+charset=utf-8 318.6933ms
+2025-09-30 15:12:05.881 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 15:12:05.885 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 4.8291ms
+2025-09-30 15:12:05.945 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 15:12:05.959 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.5451ms
+2025-09-30 15:12:09.963 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 15:12:09.976 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:12:09.984 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 15:12:09.999 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:10.004 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:10.041 -04:00 [INF] Received HTTP response headers after 29.8757ms - 200
+2025-09-30 15:12:10.048 -04:00 [INF] End processing HTTP request after 48.7247ms - 200
+2025-09-30 15:12:10.050 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 15:12:10.052 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 15:12:10.058 -04:00 [INF] Games index page accessed.
+2025-09-30 15:12:10.061 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 15:12:10.066 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 15:12:10.069 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 15:12:10.080 -04:00 [INF] Executed ViewResult - view Index executed in 10.2628ms.
+2025-09-30 15:12:10.088 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 89.5872ms
+2025-09-30 15:12:10.098 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:12:10.105 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 141.9245ms
+2025-09-30 15:12:10.130 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 15:12:10.134 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 4.1327ms
+2025-09-30 15:12:25.169 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 15:12:25.176 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:12:25.179 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 15:12:25.182 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:25.186 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:25.208 -04:00 [INF] Received HTTP response headers after 20.5945ms - 200
+2025-09-30 15:12:25.215 -04:00 [INF] End processing HTTP request after 32.5869ms - 200
+2025-09-30 15:12:25.221 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 15:12:25.222 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 15:12:25.224 -04:00 [INF] Games index page accessed.
+2025-09-30 15:12:25.227 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 15:12:25.230 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 15:12:25.232 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 15:12:25.240 -04:00 [INF] Executed ViewResult - view Index executed in 7.6266ms.
+2025-09-30 15:12:25.247 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 64.5164ms
+2025-09-30 15:12:25.254 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:12:25.260 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 90.8215ms
+2025-09-30 15:12:25.342 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 15:12:25.346 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 4.3641ms
+2025-09-30 15:12:32.771 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games/play/2 - -
+2025-09-30 15:12:32.785 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 15:12:32.794 -04:00 [INF] Route matched with {action = "Play", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Play(Int32) on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 15:12:32.810 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:32.818 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:32.865 -04:00 [INF] Received HTTP response headers after 39.6564ms - 200
+2025-09-30 15:12:32.872 -04:00 [INF] End processing HTTP request after 62.0481ms - 200
+2025-09-30 15:12:32.879 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 15:12:32.885 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 15:12:32.893 -04:00 [INF] GameSuccess: User requested to play game with ID 2.
+2025-09-30 15:12:32.897 -04:00 [WRN] Attempted to play a disabled or unknown game with ID 2.
+2025-09-30 15:12:32.902 -04:00 [INF] Executing RedirectResult, redirecting to /Games.
+2025-09-30 15:12:32.904 -04:00 [INF] Executed action BucStop.Controllers.GamesController.Play (BucStop) in 94.2154ms
+2025-09-30 15:12:32.907 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.Play (BucStop)'
+2025-09-30 15:12:32.910 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games/play/2 - - - 302 0 - 138.6438ms
+2025-09-30 15:12:32.914 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-30 15:12:32.923 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:12:32.928 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-30 15:12:32.934 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:32.937 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-30 15:12:32.968 -04:00 [INF] Received HTTP response headers after 28.2847ms - 200
+2025-09-30 15:12:32.977 -04:00 [INF] End processing HTTP request after 42.9438ms - 200
+2025-09-30 15:12:32.985 -04:00 [INF] Successfully retrieved 3 games from API.
+2025-09-30 15:12:32.991 -04:00 [INF] Game ID 3 Content URL: https://localhost:1941/js/pong.js
+2025-09-30 15:12:33.000 -04:00 [INF] Games index page accessed.
+2025-09-30 15:12:33.005 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-30 15:12:33.010 -04:00 [INF] UserActivity: ravnborg@etsu.edu accessed the games index page.
+2025-09-30 15:12:33.013 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-30 15:12:33.017 -04:00 [INF] Executed ViewResult - view Index executed in 4.3694ms.
+2025-09-30 15:12:33.021 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 86.8194ms
+2025-09-30 15:12:33.025 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-30 15:12:33.028 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 114.3311ms
+2025-09-30 15:12:33.040 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-30 15:12:33.047 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-30 15:12:33.049 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 2.6882ms
+2025-09-30 15:12:33.051 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.9777ms
+2025-09-30 15:15:12.103 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:15:12.113 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:15:12.146 -04:00 [INF] Received HTTP response headers after 27.6404ms - 200
+2025-09-30 15:15:12.155 -04:00 [INF] End processing HTTP request after 52.5624ms - 200
+2025-09-30 15:15:12.157 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:15:12.161 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:15:12.165 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:15:12.191 -04:00 [INF] Received HTTP response headers after 23.67ms - 200
+2025-09-30 15:15:12.200 -04:00 [INF] End processing HTTP request after 38.7999ms - 200
+2025-09-30 15:15:12.206 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:15:12.212 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:15:12.216 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:15:12.256 -04:00 [INF] Received HTTP response headers after 33.6523ms - 200
+2025-09-30 15:15:12.263 -04:00 [INF] End processing HTTP request after 50.7322ms - 200
+2025-09-30 15:15:12.266 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:15:12.270 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:15:12.274 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:15:12.301 -04:00 [INF] Received HTTP response headers after 23.3473ms - 200
+2025-09-30 15:15:12.308 -04:00 [INF] End processing HTTP request after 38.0248ms - 200
+2025-09-30 15:15:12.310 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:20:12.326 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:20:12.334 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:20:12.363 -04:00 [INF] Received HTTP response headers after 22.7811ms - 200
+2025-09-30 15:20:12.367 -04:00 [INF] End processing HTTP request after 41.2208ms - 200
+2025-09-30 15:20:12.369 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:20:12.371 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:20:12.375 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:20:12.399 -04:00 [INF] Received HTTP response headers after 23.0522ms - 200
+2025-09-30 15:20:12.408 -04:00 [INF] End processing HTTP request after 36.8301ms - 200
+2025-09-30 15:20:12.413 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:20:12.417 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:20:12.423 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:20:12.449 -04:00 [INF] Received HTTP response headers after 21.9761ms - 200
+2025-09-30 15:20:12.455 -04:00 [INF] End processing HTTP request after 37.7451ms - 200
+2025-09-30 15:20:12.459 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:20:12.469 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:20:12.477 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:20:12.506 -04:00 [INF] Received HTTP response headers after 20.3509ms - 200
+2025-09-30 15:20:12.511 -04:00 [INF] End processing HTTP request after 41.4552ms - 200
+2025-09-30 15:20:12.514 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:25:12.530 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:25:12.540 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:25:12.573 -04:00 [INF] Received HTTP response headers after 26.2208ms - 200
+2025-09-30 15:25:12.580 -04:00 [INF] End processing HTTP request after 50.6359ms - 200
+2025-09-30 15:25:12.584 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:25:12.589 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:25:12.595 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:25:12.640 -04:00 [INF] Received HTTP response headers after 39.3028ms - 200
+2025-09-30 15:25:12.649 -04:00 [INF] End processing HTTP request after 59.707ms - 200
+2025-09-30 15:25:12.655 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:25:12.657 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:25:12.661 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:25:12.679 -04:00 [INF] Received HTTP response headers after 16.0827ms - 200
+2025-09-30 15:25:12.684 -04:00 [INF] End processing HTTP request after 26.1572ms - 200
+2025-09-30 15:25:12.691 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:25:12.696 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:25:12.700 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:25:12.739 -04:00 [INF] Received HTTP response headers after 32.3851ms - 200
+2025-09-30 15:25:12.747 -04:00 [INF] End processing HTTP request after 51.5496ms - 200
+2025-09-30 15:25:12.756 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:30:12.778 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:30:12.787 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:30:12.823 -04:00 [INF] Received HTTP response headers after 26.1741ms - 200
+2025-09-30 15:30:12.832 -04:00 [INF] End processing HTTP request after 54.2919ms - 200
+2025-09-30 15:30:12.836 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:30:12.843 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:30:12.847 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:30:12.872 -04:00 [INF] Received HTTP response headers after 22.3131ms - 200
+2025-09-30 15:30:12.880 -04:00 [INF] End processing HTTP request after 37.2863ms - 200
+2025-09-30 15:30:12.887 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:30:12.893 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:30:12.896 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:30:12.924 -04:00 [INF] Received HTTP response headers after 23.5169ms - 200
+2025-09-30 15:30:12.932 -04:00 [INF] End processing HTTP request after 38.8848ms - 200
+2025-09-30 15:30:12.938 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:30:12.944 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:30:12.950 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:30:12.982 -04:00 [INF] Received HTTP response headers after 27.2802ms - 200
+2025-09-30 15:30:12.991 -04:00 [INF] End processing HTTP request after 47.1351ms - 200
+2025-09-30 15:30:12.996 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:35:13.011 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:35:13.019 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:35:13.045 -04:00 [INF] Received HTTP response headers after 22.1988ms - 200
+2025-09-30 15:35:13.048 -04:00 [INF] End processing HTTP request after 37.4398ms - 200
+2025-09-30 15:35:13.051 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:35:13.053 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:35:13.056 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:35:13.077 -04:00 [INF] Received HTTP response headers after 18.0027ms - 200
+2025-09-30 15:35:13.079 -04:00 [INF] End processing HTTP request after 26.2829ms - 200
+2025-09-30 15:35:13.082 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:35:13.085 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:35:13.087 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:35:13.108 -04:00 [INF] Received HTTP response headers after 17.3935ms - 200
+2025-09-30 15:35:13.111 -04:00 [INF] End processing HTTP request after 26.4631ms - 200
+2025-09-30 15:35:13.114 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:35:13.117 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:35:13.120 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:35:13.139 -04:00 [INF] Received HTTP response headers after 16.6957ms - 200
+2025-09-30 15:35:13.142 -04:00 [INF] End processing HTTP request after 25.6501ms - 200
+2025-09-30 15:35:13.145 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:40:13.153 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:40:13.162 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:40:13.197 -04:00 [INF] Received HTTP response headers after 28.2189ms - 200
+2025-09-30 15:40:13.203 -04:00 [INF] End processing HTTP request after 50.0432ms - 200
+2025-09-30 15:40:13.206 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:40:13.208 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:40:13.213 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:40:13.236 -04:00 [INF] Received HTTP response headers after 19.5211ms - 200
+2025-09-30 15:40:13.239 -04:00 [INF] End processing HTTP request after 31.3566ms - 200
+2025-09-30 15:40:13.243 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:40:13.246 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:40:13.250 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:40:13.266 -04:00 [INF] Received HTTP response headers after 12.4325ms - 200
+2025-09-30 15:40:13.270 -04:00 [INF] End processing HTTP request after 23.8341ms - 200
+2025-09-30 15:40:13.272 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:40:13.274 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:40:13.277 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:40:13.292 -04:00 [INF] Received HTTP response headers after 13.0398ms - 200
+2025-09-30 15:40:13.294 -04:00 [INF] End processing HTTP request after 20.205ms - 200
+2025-09-30 15:40:13.298 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:45:13.318 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:45:13.324 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:45:13.362 -04:00 [INF] Received HTTP response headers after 34.4448ms - 200
+2025-09-30 15:45:13.369 -04:00 [INF] End processing HTTP request after 51.5355ms - 200
+2025-09-30 15:45:13.373 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:45:13.376 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:45:13.379 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:45:13.414 -04:00 [INF] Received HTTP response headers after 29.8087ms - 200
+2025-09-30 15:45:13.424 -04:00 [INF] End processing HTTP request after 48.0488ms - 200
+2025-09-30 15:45:13.431 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:45:13.434 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:45:13.440 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:45:13.472 -04:00 [INF] Received HTTP response headers after 27.855ms - 200
+2025-09-30 15:45:13.481 -04:00 [INF] End processing HTTP request after 46.6502ms - 200
+2025-09-30 15:45:13.485 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:45:13.489 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:45:13.493 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:45:13.511 -04:00 [INF] Received HTTP response headers after 14.0278ms - 200
+2025-09-30 15:45:13.514 -04:00 [INF] End processing HTTP request after 25.296ms - 200
+2025-09-30 15:45:13.516 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 15:50:13.522 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:50:13.530 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-30 15:50:13.562 -04:00 [INF] Received HTTP response headers after 25.0489ms - 200
+2025-09-30 15:50:13.567 -04:00 [INF] End processing HTTP request after 44.7457ms - 200
+2025-09-30 15:50:13.571 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
+2025-09-30 15:50:13.573 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:50:13.576 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-30 15:50:13.591 -04:00 [INF] Received HTTP response headers after 12.5069ms - 200
+2025-09-30 15:50:13.595 -04:00 [INF] End processing HTTP request after 21.7942ms - 200
+2025-09-30 15:50:13.598 -04:00 [INF] APIHeartbeat: Snake is healthy.
+2025-09-30 15:50:13.601 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:50:13.604 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-30 15:50:13.620 -04:00 [INF] Received HTTP response headers after 13.75ms - 200
+2025-09-30 15:50:13.623 -04:00 [INF] End processing HTTP request after 22.2818ms - 200
+2025-09-30 15:50:13.626 -04:00 [INF] APIHeartbeat: Tetris is healthy.
+2025-09-30 15:50:13.628 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:50:13.630 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-30 15:50:13.648 -04:00 [INF] Received HTTP response headers after 13.5756ms - 200
+2025-09-30 15:50:13.652 -04:00 [INF] End processing HTTP request after 24.0384ms - 200
+2025-09-30 15:50:13.655 -04:00 [INF] APIHeartbeat: Pong is healthy.
