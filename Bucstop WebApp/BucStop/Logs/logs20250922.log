@@ -1,0 +1,407 @@
+2025-09-22 23:28:35.427 -04:00 [INF] User profile is available. Using 'C:\Users\kaira\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-22 23:28:35.539 -04:00 [INF] Creating key {e9a6cefe-8bb6-4272-a777-328d20da87f2} with creation date 2025-09-23 03:28:35Z, activation date 2025-09-23 03:28:35Z, and expiration date 2025-12-22 03:28:35Z.
+2025-09-22 23:28:35.564 -04:00 [INF] Writing data to file 'C:\Users\kaira\AppData\Local\ASP.NET\DataProtection-Keys\key-e9a6cefe-8bb6-4272-a777-328d20da87f2.xml'.
+2025-09-22 23:28:35.587 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/health"
+2025-09-22 23:28:35.595 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/health"
+2025-09-22 23:28:35.929 -04:00 [INF] Now listening on: https://localhost:7182
+2025-09-22 23:28:35.933 -04:00 [INF] Now listening on: http://localhost:5230
+2025-09-22 23:28:35.991 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-22 23:28:35.993 -04:00 [INF] Hosting environment: Development
+2025-09-22 23:28:35.998 -04:00 [INF] Content root path: C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\
+2025-09-22 23:28:39.134 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-22 23:28:39.391 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-22 23:28:39.492 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-22 23:28:39.517 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:28:39.524 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:28:39.911 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-22 23:28:39.923 -04:00 [INF] Start processing HTTP request GET "https://localhost:1948/health"
+2025-09-22 23:28:39.929 -04:00 [INF] Sending HTTP request GET "https://localhost:1948/health"
+2025-09-22 23:28:43.782 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:28:43.806 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:28:43.861 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-22 23:28:44.199 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-22 23:28:44.206 -04:00 [INF] Start processing HTTP request GET "https://localhost:2626/health"
+2025-09-22 23:28:44.209 -04:00 [INF] Sending HTTP request GET "https://localhost:2626/health"
+2025-09-22 23:28:44.722 -04:00 [INF] Executed ViewResult - view Index executed in 884.7814ms.
+2025-09-22 23:28:44.727 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - -
+2025-09-22 23:28:44.727 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-09-22 23:28:44.727 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/hammer.min.js - -
+2025-09-22 23:28:44.727 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:28:44.727 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Logo.png - -
+2025-09-22 23:28:44.728 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - -
+2025-09-22 23:28:44.732 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 5232.142ms
+2025-09-22 23:28:44.751 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-22 23:28:44.819 -04:00 [INF] Sending file. Request path: '/Logo.png'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\Logo.png'
+2025-09-22 23:28:44.819 -04:00 [INF] Sending file. Request path: '/js/hammer.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\js\hammer.min.js'
+2025-09-22 23:28:44.819 -04:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\css\site.css'
+2025-09-22 23:28:44.819 -04:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-09-22 23:28:44.824 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/hammer.min.js - - - 200 24750 application/javascript 97.6095ms
+2025-09-22 23:28:44.821 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 5692.2299ms
+2025-09-22 23:28:44.820 -04:00 [INF] Sending file. Request path: '/BucStop.styles.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\obj\Debug\net6.0\scopedcss\bundle\BucStop.styles.css'
+2025-09-22 23:28:44.830 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 102.4975ms
+2025-09-22 23:28:44.829 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-09-22 23:28:44.823 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Logo.png - - - 200 11885 image/png 96.3874ms
+2025-09-22 23:28:44.827 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - - - 200 1881 text/css 100.8932ms
+2025-09-22 23:28:44.837 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 200 1124 text/css 110.0167ms
+2025-09-22 23:28:44.834 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - -
+2025-09-22 23:28:44.846 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-09-22 23:28:44.820 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-09-22 23:28:44.863 -04:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\js\site.js'
+2025-09-22 23:28:44.863 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 34.9207ms
+2025-09-22 23:28:44.866 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 139.7491ms
+2025-09-22 23:28:44.869 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - - - 200 1505 application/javascript 34.8967ms
+2025-09-22 23:28:44.877 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:28:44.877 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:28:44.886 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 8.5729ms
+2025-09-22 23:28:44.887 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/images/background.png - -
+2025-09-22 23:28:44.898 -04:00 [INF] Sending file. Request path: '/images/background.png'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\images\background.png'
+2025-09-22 23:28:44.901 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/images/background.png - - - 200 176387 image/png 14.4291ms
+2025-09-22 23:28:44.911 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/fonts/BebasNeue-Regular.ttf - -
+2025-09-22 23:28:44.922 -04:00 [INF] Sending file. Request path: '/fonts/BebasNeue-Regular.ttf'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\fonts\BebasNeue-Regular.ttf'
+2025-09-22 23:28:44.926 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/fonts/BebasNeue-Regular.ttf - - - 200 57676 application/x-font-ttf 15.0008ms
+2025-09-22 23:28:45.006 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 128.2969ms
+2025-09-22 23:28:45.040 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/favicon.ico - -
+2025-09-22 23:28:45.048 -04:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\favicon.ico'
+2025-09-22 23:28:45.053 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/favicon.ico - - - 200 3758 image/x-icon 13.3918ms
+2025-09-22 23:28:45.063 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2025-09-22 23:28:45.063 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7182/js/hammer.min.js.map - -
+2025-09-22 23:28:45.075 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7182/js/hammer.min.js.map - - - 404 0 - 12.1684ms
+2025-09-22 23:28:45.099 -04:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2025-09-22 23:28:45.103 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 40.5711ms
+2025-09-22 23:28:45.105 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/hammer.min.js.map - -
+2025-09-22 23:28:45.119 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/hammer.min.js.map - - - 404 0 - 14.3859ms
+2025-09-22 23:28:48.383 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-22 23:28:48.388 -04:00 [INF] Start processing HTTP request GET "https://localhost:1941/health"
+2025-09-22 23:28:48.393 -04:00 [INF] Sending HTTP request GET "https://localhost:1941/health"
+2025-09-22 23:28:52.535 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health
+2025-09-22 23:28:54.484 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-22 23:28:54.520 -04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-22 23:28:54.562 -04:00 [INF] AuthenticationScheme: CustomAuthenticationScheme was challenged.
+2025-09-22 23:28:54.567 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 302 0 - 83.1714ms
+2025-09-22 23:28:54.571 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Account/Login?ReturnUrl=%2FGames - -
+2025-09-22 23:28:54.583 -04:00 [INF] Executing endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:28:54.590 -04:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller BucStop.Controllers.AccountController (BucStop).
+2025-09-22 23:28:54.598 -04:00 [INF] Executing ViewResult, running view Login.
+2025-09-22 23:28:54.663 -04:00 [INF] Executed ViewResult - view Login executed in 67.0141ms.
+2025-09-22 23:28:54.670 -04:00 [INF] Executed action BucStop.Controllers.AccountController.Login (BucStop) in 74.451ms
+2025-09-22 23:28:54.682 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:28:54.683 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:28:54.682 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:28:54.687 -04:00 [INF] Executed endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:28:54.702 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 19.6271ms
+2025-09-22 23:28:54.728 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Account/Login?ReturnUrl=%2FGames - - - 200 - text/html;+charset=utf-8 157.3461ms
+2025-09-22 23:28:54.747 -04:00 [INF] The file /BucStop.styles.css was not modified
+2025-09-22 23:28:54.759 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 76.6300ms
+2025-09-22 23:28:54.760 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 304 - text/css 77.4094ms
+2025-09-22 23:29:03.503 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 200
+2025-09-22 23:29:03.523 -04:00 [INF] Executing endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:29:03.570 -04:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller BucStop.Controllers.AccountController (BucStop).
+2025-09-22 23:29:03.704 -04:00 [WRN] InvalidLogin: Invalid login attempt for baba@baba
+2025-09-22 23:29:03.718 -04:00 [INF] PageLoadTimes: Denied Login Page Loaded in 49ms.
+2025-09-22 23:29:03.739 -04:00 [INF] Executing ViewResult, running view Login.
+2025-09-22 23:29:03.751 -04:00 [INF] Executed ViewResult - view Login executed in 11.6819ms.
+2025-09-22 23:29:03.757 -04:00 [INF] Executed action BucStop.Controllers.AccountController.Login (BucStop) in 177.3774ms
+2025-09-22 23:29:03.764 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - -
+2025-09-22 23:29:03.764 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:29:03.764 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-09-22 23:29:03.765 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/hammer.min.js - -
+2025-09-22 23:29:03.766 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Logo.png - -
+2025-09-22 23:29:03.766 -04:00 [INF] Executed endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:29:03.766 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - -
+2025-09-22 23:29:03.770 -04:00 [INF] The file /css/site.css was not modified
+2025-09-22 23:29:03.771 -04:00 [INF] The file /BucStop.styles.css was not modified
+2025-09-22 23:29:03.773 -04:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-09-22 23:29:03.775 -04:00 [INF] The file /js/hammer.min.js was not modified
+2025-09-22 23:29:03.777 -04:00 [INF] The file /Logo.png was not modified
+2025-09-22 23:29:03.780 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 200 - 200 - text/html;+charset=utf-8 276.3990ms
+2025-09-22 23:29:03.782 -04:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-09-22 23:29:03.784 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - - - 304 - text/css 20.0285ms
+2025-09-22 23:29:03.788 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 304 - text/css 23.2681ms
+2025-09-22 23:29:03.808 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-09-22 23:29:03.808 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:29:03.791 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 27.0901ms
+2025-09-22 23:29:03.794 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/hammer.min.js - - - 304 - application/javascript 29.4066ms
+2025-09-22 23:29:03.797 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Logo.png - - - 304 - image/png 30.9742ms
+2025-09-22 23:29:03.802 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 35.4318ms
+2025-09-22 23:29:03.809 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:29:03.814 -04:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-09-22 23:29:03.816 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 8.2646ms
+2025-09-22 23:29:03.835 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 26.4927ms
+2025-09-22 23:29:03.847 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.6638ms
+2025-09-22 23:29:11.197 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 200
+2025-09-22 23:29:11.210 -04:00 [INF] Executing endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:29:11.215 -04:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller BucStop.Controllers.AccountController (BucStop).
+2025-09-22 23:29:11.223 -04:00 [WRN] InvalidLogin: Invalid login attempt for baba@etsu
+2025-09-22 23:29:11.228 -04:00 [INF] PageLoadTimes: Denied Login Page Loaded in 4ms.
+2025-09-22 23:29:11.239 -04:00 [INF] Executing ViewResult, running view Login.
+2025-09-22 23:29:11.249 -04:00 [INF] Executed ViewResult - view Login executed in 10.5551ms.
+2025-09-22 23:29:11.260 -04:00 [INF] Executed action BucStop.Controllers.AccountController.Login (BucStop) in 38.3358ms
+2025-09-22 23:29:11.275 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:29:11.275 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:29:11.279 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - -
+2025-09-22 23:29:11.281 -04:00 [INF] Executed endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:29:11.291 -04:00 [INF] The file /BucStop.styles.css was not modified
+2025-09-22 23:29:11.297 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 22.4535ms
+2025-09-22 23:29:11.307 -04:00 [INF] The file /js/site.js was not modified
+2025-09-22 23:29:11.323 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 304 - text/css 48.9323ms
+2025-09-22 23:29:11.313 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 200 - 200 - text/html;+charset=utf-8 116.3330ms
+2025-09-22 23:29:11.332 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:29:11.339 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - - - 304 - application/javascript 60.3668ms
+2025-09-22 23:29:11.387 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.4559ms
+2025-09-22 23:29:18.329 -04:00 [INF] Request starting HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 204
+2025-09-22 23:29:18.341 -04:00 [INF] Executing endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:29:18.345 -04:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller BucStop.Controllers.AccountController (BucStop).
+2025-09-22 23:29:18.366 -04:00 [INF] AuthenticationScheme: CustomAuthenticationScheme signed in.
+2025-09-22 23:29:18.376 -04:00 [INF] UserActivity: baba@etsu.edu successfully logged in.
+2025-09-22 23:29:18.411 -04:00 [INF] PageLoadTimes: Successful Login Page Loaded in 24ms.
+2025-09-22 23:29:18.426 -04:00 [INF] Executing RedirectResult, redirecting to /.
+2025-09-22 23:29:18.437 -04:00 [INF] Executed action BucStop.Controllers.AccountController.Login (BucStop) in 85.4554ms
+2025-09-22 23:29:18.449 -04:00 [INF] Executed endpoint 'BucStop.Controllers.AccountController.Login (BucStop)'
+2025-09-22 23:29:18.455 -04:00 [INF] Request finished HTTP/2 POST https://localhost:7182/Account/Login application/x-www-form-urlencoded 204 - 302 0 - 126.3602ms
+2025-09-22 23:29:18.464 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-22 23:29:18.484 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-22 23:29:18.491 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-22 23:29:18.504 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:18.512 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:22.738 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:29:22.742 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:29:22.745 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-22 23:29:22.760 -04:00 [INF] Executed ViewResult - view Index executed in 14.9266ms.
+2025-09-22 23:29:22.770 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 4266.2639ms
+2025-09-22 23:29:22.778 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-22 23:29:22.787 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:29:22.787 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:29:22.791 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:29:22.794 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 4329.5583ms
+2025-09-22 23:29:22.802 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 14.4868ms
+2025-09-22 23:29:22.811 -04:00 [INF] The file /BucStop.styles.css was not modified
+2025-09-22 23:29:22.844 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 304 - text/css 57.1208ms
+2025-09-22 23:29:22.862 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.2386ms
+2025-09-22 23:29:25.957 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-22 23:29:25.969 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-22 23:29:25.984 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-22 23:29:25.997 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:26.002 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:30.246 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:29:30.251 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:29:30.287 -04:00 [INF] Games index page accessed.
+2025-09-22 23:29:30.292 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-22 23:29:30.296 -04:00 [INF] UserActivity: baba@etsu.edu accessed the games index page.
+2025-09-22 23:29:30.302 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-22 23:29:30.323 -04:00 [INF] Executed ViewResult - view Index executed in 22.1866ms.
+2025-09-22 23:29:30.341 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 4346.0982ms
+2025-09-22 23:29:30.356 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Logo.png - -
+2025-09-22 23:29:30.356 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/hammer.min.js - -
+2025-09-22 23:29:30.356 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - -
+2025-09-22 23:29:30.352 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-09-22 23:29:30.358 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - -
+2025-09-22 23:29:30.366 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-22 23:29:30.376 -04:00 [INF] The file /Logo.png was not modified
+2025-09-22 23:29:30.383 -04:00 [INF] The file /js/hammer.min.js was not modified
+2025-09-22 23:29:30.417 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Logo.png - - - 304 - image/png 61.0974ms
+2025-09-22 23:29:30.403 -04:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-09-22 23:29:30.452 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/hammer.min.js - - - 304 - application/javascript 96.8658ms
+2025-09-22 23:29:30.446 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-09-22 23:29:30.466 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 108.6884ms
+2025-09-22 23:29:30.408 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 4451.0312ms
+2025-09-22 23:29:30.391 -04:00 [INF] The file /css/site.css was not modified
+2025-09-22 23:29:30.398 -04:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-09-22 23:29:30.470 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:29:30.472 -04:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-09-22 23:29:30.482 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - - - 304 - text/css 126.0276ms
+2025-09-22 23:29:30.488 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 18.1893ms
+2025-09-22 23:29:30.491 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 45.3639ms
+2025-09-22 23:29:30.485 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 133.1779ms
+2025-09-22 23:29:30.493 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:29:30.525 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.2399ms
+2025-09-22 23:29:44.229 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Home/Privacy - -
+2025-09-22 23:29:44.243 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Privacy (BucStop)'
+2025-09-22 23:29:44.253 -04:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-22 23:29:44.263 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:44.267 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:44.280 -04:00 [INF] UserActivity: baba@etsu.edu visited the Privacy page.
+2025-09-22 23:29:44.297 -04:00 [INF] Executing ViewResult, running view Privacy.
+2025-09-22 23:29:44.321 -04:00 [INF] Executed ViewResult - view Privacy executed in 27.2805ms.
+2025-09-22 23:29:44.333 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Privacy (BucStop) in 70.6839ms
+2025-09-22 23:29:44.344 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:29:44.343 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:29:44.346 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - -
+2025-09-22 23:29:44.348 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Privacy (BucStop)'
+2025-09-22 23:29:44.355 -04:00 [INF] The file /BucStop.styles.css was not modified
+2025-09-22 23:29:44.362 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 19.1707ms
+2025-09-22 23:29:44.371 -04:00 [INF] The file /js/site.js was not modified
+2025-09-22 23:29:44.384 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 304 - text/css 39.9834ms
+2025-09-22 23:29:44.377 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Home/Privacy - - - 200 - text/html;+charset=utf-8 148.0604ms
+2025-09-22 23:29:44.391 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:29:44.399 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - - - 304 - application/javascript 54.4081ms
+2025-09-22 23:29:44.438 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.7483ms
+2025-09-22 23:29:48.455 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:29:48.459 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:29:50.490 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Snapshots - -
+2025-09-22 23:29:50.511 -04:00 [INF] Executing endpoint 'BucStop.Controllers.SnapshotsController.Index (BucStop)'
+2025-09-22 23:29:50.548 -04:00 [INF] Route matched with {action = "Index", controller = "Snapshots"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.SnapshotsController (BucStop).
+2025-09-22 23:29:50.567 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:50.572 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:29:54.810 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:29:54.817 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:29:55.352 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-22 23:29:55.706 -04:00 [INF] Executed action BucStop.Controllers.SnapshotsController.Index (BucStop) in 5142.4922ms
+2025-09-22 23:29:55.712 -04:00 [INF] Executed endpoint 'BucStop.Controllers.SnapshotsController.Index (BucStop)'
+2025-09-22 23:29:55.726 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Index and length must refer to a location within the string. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at AspNetCoreGeneratedDocument.Views_Snapshots_Index.ExecuteAsync() in C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\Views\Snapshots\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-09-22 23:29:56.093 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Snapshots - - - 500 - text/html;+charset=utf-8 5602.4448ms
+2025-09-22 23:29:56.119 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:29:56.119 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:29:56.129 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 14.2472ms
+2025-09-22 23:29:56.164 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.0883ms
+2025-09-22 23:30:03.852 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:30:03.861 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 9.9923ms
+2025-09-22 23:30:05.954 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/ - -
+2025-09-22 23:30:05.969 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-22 23:30:05.975 -04:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-22 23:30:05.986 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:05.995 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:10.231 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:30:10.239 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:30:10.244 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-22 23:30:10.254 -04:00 [INF] Executed ViewResult - view Index executed in 10.5252ms.
+2025-09-22 23:30:10.265 -04:00 [INF] Executed action BucStop.Controllers.HomeController.Index (BucStop) in 4281.2956ms
+2025-09-22 23:30:10.285 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - -
+2025-09-22 23:30:10.287 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Logo.png - -
+2025-09-22 23:30:10.287 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/hammer.min.js - -
+2025-09-22 23:30:10.286 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:30:10.284 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-09-22 23:30:10.287 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.Index (BucStop)'
+2025-09-22 23:30:10.290 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - -
+2025-09-22 23:30:10.297 -04:00 [INF] The file /css/site.css was not modified
+2025-09-22 23:30:10.305 -04:00 [INF] The file /Logo.png was not modified
+2025-09-22 23:30:10.313 -04:00 [INF] The file /js/hammer.min.js was not modified
+2025-09-22 23:30:10.320 -04:00 [INF] The file /BucStop.styles.css was not modified
+2025-09-22 23:30:10.335 -04:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-09-22 23:30:10.346 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Logo.png - - - 304 - image/png 59.3849ms
+2025-09-22 23:30:10.350 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/hammer.min.js - - - 304 - application/javascript 63.8257ms
+2025-09-22 23:30:10.364 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 74.4788ms
+2025-09-22 23:30:10.339 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/css/site.css?v=wDfMEiksbvT5AvgWtWXFhIIf_kk8CfQRNUi8JE_mzPo - - - 304 - text/css 53.7441ms
+2025-09-22 23:30:10.358 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 304 - text/css 72.5820ms
+2025-09-22 23:30:10.325 -04:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-09-22 23:30:10.358 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-09-22 23:30:10.330 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/ - - - 200 - text/html;+charset=utf-8 4376.8581ms
+2025-09-22 23:30:10.372 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - -
+2025-09-22 23:30:10.387 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 102.6302ms
+2025-09-22 23:30:10.392 -04:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-09-22 23:30:10.399 -04:00 [INF] The file /js/site.js was not modified
+2025-09-22 23:30:10.410 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 52.8406ms
+2025-09-22 23:30:10.413 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:30:10.416 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:30:10.423 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/js/site.js?v=ec1ESHqW6RU7SHnxRpT7rZl2UwSnDgOaex8zCL8wEYk - - - 304 - application/javascript 50.7069ms
+2025-09-22 23:30:10.433 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 19.1142ms
+2025-09-22 23:30:10.461 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.0950ms
+2025-09-22 23:30:12.515 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Home/TwoDotFour - -
+2025-09-22 23:30:12.533 -04:00 [INF] Executing endpoint 'BucStop.Controllers.HomeController.TwoDotFour (BucStop)'
+2025-09-22 23:30:12.545 -04:00 [INF] Route matched with {action = "TwoDotFour", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TwoDotFour() on controller BucStop.Controllers.HomeController (BucStop).
+2025-09-22 23:30:12.555 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:12.562 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:12.581 -04:00 [INF] Executing ViewResult, running view TwoDotFour.
+2025-09-22 23:30:12.601 -04:00 [INF] Executed ViewResult - view TwoDotFour executed in 22.0845ms.
+2025-09-22 23:30:12.613 -04:00 [INF] Executed action BucStop.Controllers.HomeController.TwoDotFour (BucStop) in 57.821ms
+2025-09-22 23:30:12.630 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:30:12.630 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:30:12.633 -04:00 [INF] Executed endpoint 'BucStop.Controllers.HomeController.TwoDotFour (BucStop)'
+2025-09-22 23:30:12.648 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 17.9116ms
+2025-09-22 23:30:12.680 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Home/TwoDotFour - - - 200 - text/html;+charset=utf-8 164.6716ms
+2025-09-22 23:30:12.689 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.2647ms
+2025-09-22 23:30:16.779 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:30:16.784 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:30:19.068 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Snapshots - -
+2025-09-22 23:30:19.081 -04:00 [INF] Executing endpoint 'BucStop.Controllers.SnapshotsController.Index (BucStop)'
+2025-09-22 23:30:19.087 -04:00 [INF] Route matched with {action = "Index", controller = "Snapshots"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller BucStop.Controllers.SnapshotsController (BucStop).
+2025-09-22 23:30:19.098 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:19.104 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:23.313 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:30:23.317 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:30:23.685 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-22 23:30:23.847 -04:00 [INF] Executed action BucStop.Controllers.SnapshotsController.Index (BucStop) in 4750.0404ms
+2025-09-22 23:30:23.855 -04:00 [INF] Executed endpoint 'BucStop.Controllers.SnapshotsController.Index (BucStop)'
+2025-09-22 23:30:23.863 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Index and length must refer to a location within the string. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at AspNetCoreGeneratedDocument.Views_Snapshots_Index.ExecuteAsync() in C:\Users\kaira\Downloads\GGB_Buckstop_-main\GGB_Buckstop_-main\Bucstop WebApp\BucStop\Views\Snapshots\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-09-22 23:30:23.897 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Snapshots - - - 500 - text/html;+charset=utf-8 4829.0638ms
+2025-09-22 23:30:23.911 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:30:23.913 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:30:23.924 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 12.9475ms
+2025-09-22 23:30:23.948 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.4632ms
+2025-09-22 23:30:25.874 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:30:25.882 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 8.5581ms
+2025-09-22 23:30:27.936 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/Games - -
+2025-09-22 23:30:27.951 -04:00 [INF] Executing endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-22 23:30:27.956 -04:00 [INF] Route matched with {action = "Index", controller = "Games"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexAsync() on controller BucStop.Controllers.GamesController (BucStop).
+2025-09-22 23:30:27.963 -04:00 [INF] Start processing HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:27.971 -04:00 [INF] Sending HTTP request GET "https://localhost:4141/Gateway"
+2025-09-22 23:30:32.229 -04:00 [ERR] APIRequests: API request failed: No connection could be made because the target machine actively refused it. (localhost:4141)
+2025-09-22 23:30:32.240 -04:00 [WRN] API returned 0 games.
+2025-09-22 23:30:32.250 -04:00 [INF] Games index page accessed.
+2025-09-22 23:30:32.258 -04:00 [INF] PageLoadTimes: Games Page Loaded in 0ms.
+2025-09-22 23:30:32.272 -04:00 [INF] UserActivity: baba@etsu.edu accessed the games index page.
+2025-09-22 23:30:32.283 -04:00 [INF] Executing ViewResult, running view Index.
+2025-09-22 23:30:32.291 -04:00 [INF] Executed ViewResult - view Index executed in 8.9449ms.
+2025-09-22 23:30:32.309 -04:00 [INF] Executed action BucStop.Controllers.GamesController.IndexAsync (BucStop) in 4346.9854ms
+2025-09-22 23:30:32.327 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - -
+2025-09-22 23:30:32.320 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - -
+2025-09-22 23:30:32.327 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - -
+2025-09-22 23:30:32.345 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - - - 200 13750 application/javascript;+charset=utf-8 25.3529ms
+2025-09-22 23:30:32.329 -04:00 [INF] Executed endpoint 'BucStop.Controllers.GamesController.IndexAsync (BucStop)'
+2025-09-22 23:30:32.351 -04:00 [INF] The file /BucStop.styles.css was not modified
+2025-09-22 23:30:32.362 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.5029ms
+2025-09-22 23:30:32.363 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/Games - - - 200 - text/html;+charset=utf-8 4426.6605ms
+2025-09-22 23:30:32.367 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7182/BucStop.styles.css?v=Sd3IgD3NieeJLK6rZxdJJWUa7GB4nozqFL2puUuPXjk - - - 304 - text/css 43.1507ms
