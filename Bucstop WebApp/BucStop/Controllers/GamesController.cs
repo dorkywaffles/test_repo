@@ -69,11 +69,12 @@ namespace BucStop.Controllers
             List<Game> games = _httpClient.GetGamesList();
 
             Game game = games.FirstOrDefault(x => x.Id == id);
-            if (game == null)
+            if (game == null || !GameFeatureManager.IsEnabled(game.Title))
             {
-                _logger.LogWarning("{Category}: Game with ID {GameId} not found.", "GameSuccess", id);
-                return NotFound();
+                _logger.LogWarning("Attempted to play a disabled or unknown game with ID {GameId}.", id);
+                return RedirectToAction("Index");
             }
+
             // Log the URL of the game being loaded
             _logger.LogInformation("Loading game URL: {GameUrl}", game.Content);
             // Increment the play count for the game with the specified ID
