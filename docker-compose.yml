@@ -68,6 +68,18 @@ services:
       - "8084:80" # Expose Tetris microservice on localhost:8084
     networks:
       - bucstop-network
+      
+buckart:
+    build:
+      context: ./Team-3-BucStop_BucKart/BucKart
+      dockerfile: Dockerfile
+    container_name: game-buckart
+    environment:
+      - DOTNET_ENVIRONMENT=${env:-containersLocal}
+    ports:
+      - "8085:80" # Expose BucKart microservice on localhost:8085
+    networks:
+      - bucstop-network
 
 networks:
   bucstop-network:
