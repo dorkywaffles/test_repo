@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using System.Text;
 using BucStop.Models;
 using BucStop.Controllers;
+using BucStop.Services;
 
 
 namespace BucStop
@@ -75,6 +76,9 @@ namespace BucStop
 
                 foreach (GameInfo info in gameInfos)
                 {
+                    if (info == null || !GameFeatureManager.IsEnabled(info.Title))
+                        continue; // Skip disabled games
+
                     Game game = new Game();
 
                     if (info != null)
@@ -94,6 +98,7 @@ namespace BucStop
                     }
 
                     games.Add(game);
+                    Console.WriteLine(game);
                 }
             }
             catch (Exception ex)
