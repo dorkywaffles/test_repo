@@ -1,4 +1,4 @@
-﻿using BucStop.Models;
+﻿﻿using BucStop.Models;
 using BucStop.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +32,7 @@ namespace BucStop.Controllers
         public async Task<IActionResult> IndexAsync()
         {
             _logger.LogInformation("Games index page accessed.");
-
+           
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
@@ -69,12 +69,11 @@ namespace BucStop.Controllers
             List<Game> games = _httpClient.GetGamesList();
 
             Game game = games.FirstOrDefault(x => x.Id == id);
-            if (game == null || !GameFeatureManager.IsEnabled(game.Title))
+            if (game == null)
             {
-                _logger.LogWarning("Attempted to play a disabled or unknown game with ID {GameId}.", id);
-                return RedirectToAction("Index");
+                _logger.LogWarning("{Category}: Game with ID {GameId} not found.", "GameSuccess", id);
+                return NotFound();
             }
-
             // Log the URL of the game being loaded
             _logger.LogInformation("Loading game URL: {GameUrl}", game.Content);
             // Increment the play count for the game with the specified ID

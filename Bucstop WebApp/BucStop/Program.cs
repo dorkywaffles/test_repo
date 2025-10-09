@@ -22,7 +22,7 @@ Log.Logger = new LoggerConfiguration()
      .WriteTo.Logger(lc => lc
         .Filter.ByIncludingOnly(Matching.WithProperty("Category", "GameSuccess"))
         .WriteTo.File("Logs/game_success.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in successful api_requests
-         .WriteTo.Logger(lc => lc
+     .WriteTo.Logger(lc => lc
         .Filter.ByIncludingOnly(Matching.WithProperty("Category", "PageLoadTimes"))
         .WriteTo.File("Logs/page_load_times.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)) // Creates a new log file that takes in failed page load times
      .WriteTo.Logger(lc => lc
@@ -38,6 +38,9 @@ builder.Host.UseSerilog();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// NEW: register health checks (for /health endpoint)
+builder.Services.AddHealthChecks();
+
 // var provider=builder.Services.BuildServiceProvider();
 // var configuration=provider.GetRequiredService<IConfiguration>();
 
@@ -46,7 +49,6 @@ builder.Services.AddHttpClient<MicroClient>(client =>
     var baseAddress = new Uri(builder.Configuration.GetValue<string>("Gateway"));
     client.BaseAddress = baseAddress;
 });
-
 
 builder.Services.AddAuthentication("CustomAuthenticationScheme").AddCookie("CustomAuthenticationScheme", options =>
 {
@@ -91,6 +93,9 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// NEW: map the health endpoint (returns 200 when app is healthy)
+app.MapHealthChecks("/health");
+
 //Handles routing to "separate" game pages by setting the Play page to have subpages depending on ID
 app.MapControllerRoute(
     name: "Games",
@@ -102,3 +107,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+// Make the app's entry point visible to WebApplicationFactory in tests
+public partial class Program { }

@@ -1,38 +1,24 @@
-2025-09-30 15:22:13.917 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:25:09.817 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:25:10.283 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 15:25:10.504 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 15:25:11.803 -04:00 [INF] APIHeartbeat: Pong is healthy.
-2025-09-30 15:27:02.842 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:27:02.938 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 15:27:03.067 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 15:28:38.718 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:28:39.077 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 15:30:11.523 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:30:11.579 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 15:30:11.682 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 15:30:12.202 -04:00 [INF] APIHeartbeat: Pong is healthy.
-2025-09-30 15:39:46.570 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:39:47.082 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 15:39:47.211 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 15:39:47.423 -04:00 [INF] APIHeartbeat: Pong is healthy.
-2025-09-30 15:46:53.284 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:46:53.388 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 15:46:53.479 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 15:46:54.062 -04:00 [INF] APIHeartbeat: Pong is healthy.
-2025-09-30 15:56:21.166 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 15:56:21.478 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 15:56:22.246 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 15:56:22.873 -04:00 [INF] APIHeartbeat: Pong is healthy.
-2025-09-30 16:01:30.715 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 16:01:30.907 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 16:01:31.264 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 16:01:31.549 -04:00 [INF] APIHeartbeat: Pong is healthy.
-2025-09-30 16:01:52.597 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 16:01:52.735 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 16:01:53.396 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 16:01:53.662 -04:00 [INF] APIHeartbeat: Pong is healthy.
-2025-09-30 16:10:00.106 -04:00 [INF] APIHeartbeat: API GateWay is healthy.
-2025-09-30 16:10:00.235 -04:00 [INF] APIHeartbeat: Snake is healthy.
-2025-09-30 16:10:00.313 -04:00 [INF] APIHeartbeat: Tetris is healthy.
-2025-09-30 16:10:00.651 -04:00 [INF] APIHeartbeat: Pong is healthy.
+2025-09-30 14:58:13.815 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-30 14:58:18.428 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-30 14:58:22.689 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-30 14:58:26.886 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health
+2025-09-30 14:59:52.667 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-30 14:59:57.059 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-30 15:00:01.342 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-30 15:00:05.567 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health
+2025-09-30 15:03:26.866 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-30 15:03:31.061 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-30 15:03:35.249 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-30 15:03:39.478 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health
+2025-09-30 15:15:37.978 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-30 15:15:42.247 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-30 15:15:47.735 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-30 15:15:52.006 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health
+2025-09-30 15:17:37.172 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-30 15:17:41.478 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-30 15:17:45.706 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-30 15:17:49.969 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health
+2025-09-30 15:22:56.767 -04:00 [ERR] APIHeartbeat: API GateWay heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:4141) url: https://localhost:4141/health
+2025-09-30 15:23:01.014 -04:00 [ERR] APIHeartbeat: Snake heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1948) url: https://localhost:1948/health
+2025-09-30 15:23:05.284 -04:00 [ERR] APIHeartbeat: Tetris heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:2626) url: https://localhost:2626/health
+2025-09-30 15:23:09.552 -04:00 [ERR] APIHeartbeat: Pong heartbeat failed - No connection could be made because the target machine actively refused it. (localhost:1941) url: https://localhost:1941/health
