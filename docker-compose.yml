@@ -69,7 +69,7 @@ services:
     networks:
       - bucstop-network
       
-    buckart:
+  buckart:
       build:
         context: ./Team-3-BucStop_BucKart/BucKart
         dockerfile: Dockerfile
