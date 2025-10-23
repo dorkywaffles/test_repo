@@ -4,7 +4,7 @@
 
 ## Overview
 
-BucStop-Goofin is a modern microservices-based gaming platform developed as part of the Software Engineering II course. <br>This platform features classic arcade games (Snake, Tetris, and Pong) with a clean, responsive UI and a scalable architecture designed for cloud deployment.
+BucStop is a modern microservices-based gaming platform developed as part of the Software Engineering II course. <br>This platform features classic arcade games (Snake, Tetris, and Pong) with a clean, responsive UI and a scalable architecture designed for cloud deployment.
 
 [▶️ Watch the BucStop-Goofin Intro & Demo Video](https://vimeo.com/1079595088/f69404c8a6?ts=0&share=copy)
 
@@ -42,13 +42,13 @@ The application is built using a microservices architecture with the following c
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-org/BucStop-Goofin.git
-   cd BucStop-Goofin
+   git clone https://github.com/your-org/test_repo.git
+   cd test_repo
    ```
 
 2. Start all services using Docker Compose:
    ```bash
-   docker-compose up
+   docker-compose up -d
    ```
 
 3. Access the application:
@@ -116,7 +116,7 @@ Visual Studio automatically handles:
 
 5. Clone the repository and start the services:
    ```bash
-   git clone https://github.com/<your-repo>/BucStop-Goofin.git
+   git clone https://github.com/<your-repo>/test_repo.git
    cd BucStop-Goofin
    docker-compose up
    ```
@@ -125,10 +125,8 @@ Visual Studio automatically handles:
 
 The application supports multiple environments through configuration files:
 
-- `appsettings.Development.json`: Local development settings (please don't use this - for your own sanity)
 - `appsettings.containersLocal.json`: Local Docker container settings
 - `appsettings.containers.json`: Production container settings
-- `appsettings.Production.json`: Production settings (currently deprecated - consider removing)
 
 When deploying to production, use the appropriate environment variable (consider persisting environment variable<br> by adding it to `.bashrc` or `/etc/profile`):
 
@@ -139,7 +137,7 @@ env=containers docker-compose up -d
 ## Project Structure
 
 ```
-BucStop-Goofin/
+test_repo/
 ├── Bucstop WebApp/            # Main web application
 │   └── BucStop/
 │       ├── Controllers/       # MVC controllers
