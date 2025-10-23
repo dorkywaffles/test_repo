@@ -1,0 +1,80 @@
+services:
+  bucstop:
+    build:
+      context: ./Bucstop WebApp/BucStop
+      dockerfile: Dockerfile
+    container_name: bucstop
+    ports:
+      - "8080:80"
+    networks:
+      - bucstop-network
+    environment:
+      - DOTNET_ENVIRONMENT=${env:-containersLocal}
+      - GIT_COMMIT_HASH=${GIT_COMMIT:-unknown}
+    depends_on:
+      - api-gateway
+    volumes:
+      - snapshots-data:/app/Snapshots
+      - logs-data:/app/Logs
+
+  api-gateway:
+    build:
+      context: ./Team-3-BucStop_APIGateway/APIGateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    ports:
+      - "8081:80" # Expose API Gateway on localhost:8081
+    networks:
+      - bucstop-network
+    environment:
+      - DOTNET_ENVIRONMENT=${env:-containersLocal}
+    depends_on:
+      - snake
+      - pong
+      - tetris
+
+  snake:
+    build:
+      context: ./Team-3-BucStop_Snake/Snake
+      dockerfile: Dockerfile
+    container_name: game-snake
+    environment:
+      - DOTNET_ENVIRONMENT=${env:-containersLocal}
+    ports:
+      - "8082:80" # Expose Snake microservice on localhost:8082
+    networks:
+      - bucstop-network
+
+  pong:
+    build:
+      context: ./Team-3-BucStop_Pong/Pong
+      dockerfile: Dockerfile
+    container_name: game-pong
+    environment:
+      - DOTNET_ENVIRONMENT=${env:-containersLocal}
+    ports:
+      - "8083:80" # Expose Pong microservice on localhost:8083
+    networks:
+      - bucstop-network
+
+  tetris:
+    build:
+      context: ./Team-3-BucStop_Tetris/Tetris
+      dockerfile: Dockerfile
+    container_name: game-tetris
+    environment:
+      - DOTNET_ENVIRONMENT=${env:-containersLocal}
+    ports:
+      - "8084:80" # Expose Tetris microservice on localhost:8084
+    networks:
+      - bucstop-network
+
+networks:
+  bucstop-network:
+    driver: bridge
+
+volumes:
+  snapshots-data:
+    driver: local
+  logs-data:
+    driver: local
