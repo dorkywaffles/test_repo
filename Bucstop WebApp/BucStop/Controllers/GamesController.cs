@@ -1,4 +1,4 @@
-﻿﻿using BucStop.Models;
+﻿using BucStop.Models;
 using BucStop.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +32,7 @@ namespace BucStop.Controllers
         public async Task<IActionResult> IndexAsync()
         {
             _logger.LogInformation("Games index page accessed.");
-           
+
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 

@@ -7,9 +7,11 @@ namespace BucStop.Services
         private static readonly Dictionary<string, bool> FeatureFlags = new()
         {
             // Flase = Disabled, True = Enabled
+            //Add new games here
             { "Snake", true },
             { "Tetris", true },
-            { "Pong", true } 
+            { "Pong", true },
+            { "BucKart", true }
         };
 
         // Checks if a given game is enabled

@@ -6,8 +6,7 @@ using Microsoft.Extensions.Logging;
 using System.Text;
 using BucStop.Models;
 using BucStop.Controllers;
-using BucStop.Services; 
-
+using BucStop.Services;
 
 
 namespace BucStop
@@ -99,6 +98,7 @@ namespace BucStop
                     }
 
                     games.Add(game);
+                    Console.WriteLine(game);
                 }
             }
             catch (Exception ex)
