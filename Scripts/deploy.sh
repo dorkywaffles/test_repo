@@ -125,6 +125,35 @@ update_appsettings() {
     fi
 }
 
+# Function to update API Gateway appsettings file (special handling for PublicUrls)
+update_api_gateway_settings() {
+    local file_path="$1"
+    
+    if [ -f "$file_path" ]; then
+        # Create backup
+        cp "$file_path" "${file_path}.backup"
+        print_status "Created backup: ${file_path}.backup"
+        
+        # Update PublicUrls section with correct IPs for all services
+        if grep -q "PublicUrls" "$file_path"; then
+            # Update Snake URL
+            sed -i "s|\"Snake\": \"http://[0-9.]*:[0-9]*\"|\"Snake\": \"http://${INSTANCE_IP}:8082\"|g" "$file_path"
+            # Update Pong URL
+            sed -i "s|\"Pong\": \"http://[0-9.]*:[0-9]*\"|\"Pong\": \"http://${INSTANCE_IP}:8083\"|g" "$file_path"
+            # Update Tetris URL
+            sed -i "s|\"Tetris\": \"http://[0-9.]*:[0-9]*\"|\"Tetris\": \"http://${INSTANCE_IP}:8084\"|g" "$file_path"
+            # Update Gateway URL
+            sed -i "s|\"Gateway\": \"http://[0-9.]*:[0-9]*\"|\"Gateway\": \"http://${INSTANCE_IP}:8081\"|g" "$file_path"
+            
+            print_status "Updated API Gateway PublicUrls in $file_path with IP $INSTANCE_IP"
+        else
+            print_warning "No PublicUrls section found in $file_path"
+        fi
+    else
+        print_warning "File not found: $file_path"
+    fi
+}
+
 # Cleanup function
 cleanup() {
     print_deploy "Cleaning up processes..."
@@ -231,7 +260,9 @@ print_status "Updating appsettings.containers.json files..."
 update_appsettings "Team-3-BucStop_Snake/Snake/appsettings.containers.json" "Snake" "8082"
 update_appsettings "Team-3-BucStop_Pong/Pong/appsettings.containers.json" "Pong" "8083"
 update_appsettings "Team-3-BucStop_Tetris/Tetris/appsettings.containers.json" "Tetris" "8084"
-update_appsettings "Team-3-BucStop_APIGateway/APIGateway/appsettings.containers.json" "Gateway" "8081"
+
+# Update API Gateway appsettings.containers.json (special handling for PublicUrls)
+update_api_gateway_settings "Team-3-BucStop_APIGateway/APIGateway/appsettings.containers.json"
 
 # 6. Update main webapp appsettings if it has MicroserviceUrls
 print_status "Checking main webapp appsettings..."
