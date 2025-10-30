@@ -2,7 +2,6 @@
 
 # Unified AWS Deployment Script for BucStop
 # This script configures the application for AWS deployment and then deploys it
-# Combines functionality from aws_deploy.sh and deploy.sh
 
 set -e  # Exit on any error
 
